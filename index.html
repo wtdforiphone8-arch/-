@@ -5,19 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>今治 ローカルビジネス デモサイト集</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 20px; background: #faf8f5; color: #222; }
-    h1 { font-size: 1.4rem; margin-bottom: 16px; }
-    .card { display: block; background: #fff; border: 1px solid #e5dfd5; border-radius: 8px; padding: 16px 20px; text-decoration: none; color: inherit; margin-bottom: 12px; }
-    .card:hover { border-color: #b36d2b; }
-    .title { font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; }
-    .sub { font-size: 0.88rem; color: #666; }
+    :root { --ink: #221f1c; --muted: #6f675e; --line: #e5dfd5; --accent: #b36d2b; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+      max-width: 680px; margin: 0 auto; padding: 48px 20px 64px;
+      background: #faf8f5; color: var(--ink); line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .eyebrow { font-size: 0.7rem; letter-spacing: 0.28em; color: var(--accent); margin-bottom: 10px; }
+    h1 { font-size: 1.45rem; margin-bottom: 8px; letter-spacing: 0.04em; }
+    .lead { font-size: 0.86rem; color: var(--muted); margin-bottom: 32px; }
+    .card {
+      display: block; background: #fff; border: 1px solid var(--line);
+      border-radius: 10px; padding: 15px 18px; text-decoration: none; color: inherit;
+      margin-bottom: 12px; transition: 0.2s;
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .card-main { display: flex; align-items: center; gap: 14px; }
+    .thumb {
+      width: 62px; height: 62px; border-radius: 8px; flex: 0 0 62px;
+      background-size: cover; background-position: center; background-color: #eee;
+    }
+    .title { font-weight: 700; font-size: 1.02rem; margin-bottom: 3px; }
+    .sub { font-size: 0.8rem; color: var(--muted); }
+    .meta { font-size: 0.72rem; color: #9a9187; margin-top: 4px; letter-spacing: 0.04em; }
+    footer { margin-top: 34px; font-size: 0.72rem; color: #9a9187; line-height: 1.8; }
   </style>
 </head>
 <body>
+  <div class="eyebrow">IMABARI WEB DEMO</div>
   <h1>今治 ローカルビジネス デモサイト集</h1>
+  <p class="lead">スマホ対応の1ページLP（買い切り3万円）の提案用サンプルです。写真・営業時間・価格は公開情報にもとづいています。</p>
+
   <a class="card" href="./ozaki/">
-    <div class="title">炭火やきとり おざき（恵美須町）</div>
-    <div class="sub">焼鳥・居酒屋 / スマホ対応1ページLPデモ</div>
+    <div class="card-main">
+      <div class="thumb" style="background-image:url('./ozaki/ozaki_2.jpg')"></div>
+      <div>
+        <div class="title">炭火やきとり おざき</div>
+        <div class="sub">焼鳥・居酒屋 ／ 今治市恵美須町</div>
+        <div class="meta">和の落ち着いたデザイン・お品書き・電話予約導線</div>
+      </div>
+    </div>
   </a>
+
+  <a class="card" href="./takedaya/">
+    <div class="card-main">
+      <div class="thumb" style="background-image:url('./takedaya/exterior.jpg')"></div>
+      <div>
+        <div class="title">武田屋 八幡饅頭</div>
+        <div class="sub">和菓子 ／ 今治市玉川町八幡</div>
+        <div class="meta">老舗和菓子のデザイン・こだわり・価格表・ご贈答案内</div>
+      </div>
+    </div>
+  </a>
+
+  <a class="card" href="./hairs-america/">
+    <div class="card-main">
+      <div class="thumb" style="background-image:url('./hairs-america/exterior.jpg')"></div>
+      <div>
+        <div class="title">Hair's AMERICA（ヘアーズアメリカ）</div>
+        <div class="sub">理容室 ／ 今治市北日吉町</div>
+        <div class="meta">清潔感のあるモダンなデザイン・曜日別営業時間・アクセス</div>
+      </div>
+    </div>
+  </a>
+
+  <footer>
+    提案用のデモページです。掲載内容は2026年11月時点の公開情報にもとづいており、写真はGoogleマップの投稿写真を使用しています。
+  </footer>
 </body>
 </html>

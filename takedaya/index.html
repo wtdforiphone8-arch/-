@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>武田屋 八幡饅頭｜愛媛県今治市玉川町 八幡饅頭一筋</title>
+<meta name="description" content="今治市玉川町八幡。江戸の終わりに武士たちが伝えた八幡饅頭を、いまも唯一つくり続ける武田屋。黒糖100％、添加物はふくらし粉だけ。お遍路道沿いの店先で、できたてをどうぞ。" />
+<style>
+  :root {
+    --paper: #f7f2e8;
+    --paper-deep: #efe6d5;
+    --ink: #241f1a;
+    --ink-soft: #4a423a;
+    --muted: #7d7366;
+    --kuro: #5a3a22;
+    --indigo: #2c4359;
+    --vermilion: #a03f2a;
+    --gold: #a98a52;
+    --line: rgba(90, 58, 34, 0.16);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", Georgia, serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.02em;
+  }
+  .sans {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+    letter-spacing: 0.04em;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+
+  /* header */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(247, 242, 232, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner {
+    max-width: 1080px; margin: 0 auto; padding: 12px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .brand { display: flex; align-items: baseline; gap: 10px; text-decoration: none; }
+  .brand-main { font-size: 1.18rem; font-weight: 700; letter-spacing: 0.16em; }
+  .brand-sub { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.2em; }
+  .header-right { display: flex; align-items: center; gap: 18px; }
+  .header-tel { font-size: 0.86rem; color: var(--ink-soft); text-decoration: none; letter-spacing: 0.06em; }
+  .header-tel strong { font-size: 1.02rem; color: var(--kuro); }
+  .header-cta {
+    background: var(--kuro); color: var(--paper); text-decoration: none;
+    padding: 9px 16px; border-radius: 2px; font-size: 0.82rem; letter-spacing: 0.1em;
+  }
+  nav.nav-links { display: none; gap: 22px; font-size: 0.82rem; }
+  nav.nav-links a { text-decoration: none; color: var(--ink-soft); letter-spacing: 0.1em; }
+  nav.nav-links a:hover { color: var(--vermilion); }
+  @media (min-width: 860px) { nav.nav-links { display: flex; } .header-tel { display: block; } }
+  @media (max-width: 520px) { .header-tel { display: none; } .brand-sub { display: none; } }
+
+  /* hero */
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-photo { order: -1; position: relative; overflow: hidden; }
+  .hero-photo img { width: 100%; height: 46vh; min-height: 260px; object-fit: cover; object-position: center 60%; }
+  .hero-copy {
+    padding: 44px 22px 48px;
+    max-width: 620px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 0.74rem; letter-spacing: 0.24em; color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .eyebrow::before { content: ""; width: 34px; height: 1px; background: var(--gold); display: block; }
+  .hero h1 {
+    font-size: clamp(1.75rem, 5.2vw, 2.9rem);
+    line-height: 1.5;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    margin-bottom: 20px;
+  }
+  .hero h1 em { font-style: normal; color: var(--vermilion); }
+  .hero-lead { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 30px; }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    text-decoration: none; padding: 13px 22px; border-radius: 2px;
+    font-size: 0.9rem; letter-spacing: 0.08em; transition: 0.2s;
+  }
+  .btn-primary { background: var(--kuro); color: var(--paper); }
+  .btn-primary:hover { background: #452b18; }
+  .btn-outline { border: 1px solid var(--kuro); color: var(--kuro); }
+  .btn-outline:hover { background: rgba(90,58,34,0.07); }
+  @media (min-width: 880px) {
+    .hero { grid-template-columns: 1.05fr 1fr; min-height: 76vh; }
+    .hero-photo { order: 0; }
+    .hero-photo img { height: 100%; min-height: 480px; }
+    .hero-copy { padding: 80px 5vw 80px 6vw; margin: 0; display: flex; flex-direction: column; justify-content: center; max-width: none; }
+    .hero-photo::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(247,242,232,0.55) 0%, rgba(247,242,232,0) 35%);
+    }
+  }
+
+  /* fact strip */
+  .facts {
+    background: var(--indigo); color: #eee6d8;
+    padding: 18px 20px;
+  }
+  .facts-inner {
+    max-width: 1080px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr; gap: 12px 28px;
+    font-size: 0.82rem; letter-spacing: 0.12em; text-align: center;
+  }
+  @media (min-width: 700px) { .facts-inner { grid-template-columns: repeat(3, 1fr); } }
+  .facts-inner span::before { content: "・"; color: rgba(238,230,216,0.45); margin-right: 6px; }
+
+  /* sections */
+  section { max-width: 1000px; margin: 0 auto; padding: 68px 22px; }
+  .sec-head { margin-bottom: 34px; }
+  .sec-label { font-size: 0.73rem; letter-spacing: 0.28em; color: var(--gold); margin-bottom: 10px; }
+  .sec-title { font-size: clamp(1.35rem, 3.4vw, 1.85rem); font-weight: 600; letter-spacing: 0.08em; line-height: 1.6; }
+  .sec-sub { color: var(--muted); font-size: 0.88rem; margin-top: 12px; }
+
+  /* story */
+  .story { display: grid; gap: 28px; align-items: center; }
+  @media (min-width: 820px) { .story { grid-template-columns: 1fr 1.05fr; gap: 46px; } }
+  .story figure { position: relative; }
+  .story figure img { width: 100%; height: 320px; object-fit: cover; border-radius: 2px; }
+  .story figcaption { font-size: 0.72rem; color: var(--muted); margin-top: 8px; letter-spacing: 0.08em; }
+  .story p { font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 18px; }
+  .story p strong { color: var(--ink); font-weight: 600; }
+  .quote {
+    border-left: 2px solid var(--gold);
+    padding: 4px 0 4px 20px;
+    font-size: 1.02rem; color: var(--ink);
+    line-height: 2.1;
+  }
+
+  /* kodawari cards */
+  .cards { display: grid; gap: 16px; grid-template-columns: 1fr; }
+  @media (min-width: 760px) { .cards { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+  .card {
+    background: #fdfaf3;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 28px 24px;
+  }
+  .card-no { font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 12px; }
+  .card h3 { font-size: 1.12rem; font-weight: 600; letter-spacing: 0.06em; margin-bottom: 12px; line-height: 1.7; }
+  .card p { font-size: 0.88rem; color: var(--muted); line-height: 1.95; }
+
+  /* price */
+  .price-wrap {
+    display: grid; gap: 26px;
+    background: #fdfaf3;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 30px 24px;
+  }
+  @media (min-width: 820px) { .price-wrap { grid-template-columns: 1fr 1fr; padding: 40px; gap: 44px; } }
+  .price-block h3 {
+    font-size: 1rem; letter-spacing: 0.12em; margin-bottom: 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--line);
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .price-block h3 small { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em; font-weight: 400; }
+  .price-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 9px 0; border-bottom: 1px dotted rgba(90,58,34,0.18);
+    font-size: 0.92rem;
+  }
+  .price-row:last-child { border-bottom: none; }
+  .price-row .num { font-feature-settings: "tnum"; color: var(--kuro); }
+  .price-note { font-size: 0.76rem; color: var(--muted); margin-top: 18px; line-height: 1.8; }
+  .kakei {
+    margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+    font-size: 0.82rem; color: var(--ink-soft);
+  }
+  .stamp {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 46px; height: 46px; border-radius: 50%;
+    border: 1px solid var(--vermilion); color: var(--vermilion);
+    font-size: 0.78rem; letter-spacing: 0.02em;
+  }
+
+  /* band photo */
+  .band {
+    position: relative; color: #f6efe2;
+    background: #2b241d;
+  }
+  .band img { width: 100%; height: 58vh; min-height: 320px; max-height: 520px; object-fit: cover; opacity: 0.85; }
+  .band-copy {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 30px 24px;
+    background: linear-gradient(90deg, rgba(25,20,16,0.82) 0%, rgba(25,20,16,0.45) 55%, rgba(25,20,16,0.1) 100%);
+  }
+  .band-inner { max-width: 1000px; margin: 0 auto; width: 100%; }
+  .band h2 { font-size: clamp(1.3rem, 3.6vw, 1.8rem); font-weight: 600; letter-spacing: 0.08em; margin-bottom: 14px; line-height: 1.7; }
+  .band p { font-size: 0.9rem; max-width: 460px; color: #e6dccb; }
+
+  /* gift */
+  .gift { display: grid; gap: 30px; }
+  @media (min-width: 820px) { .gift { grid-template-columns: 1fr 1fr; align-items: center; } }
+  .gift-list { list-style: none; }
+  .gift-list li {
+    padding: 16px 0; border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 70px 1fr; gap: 12px;
+    font-size: 0.9rem; color: var(--ink-soft);
+  }
+  .gift-list li:first-child { border-top: 1px solid var(--line); }
+  .gift-list li b { color: var(--kuro); font-weight: 600; letter-spacing: 0.08em; font-size: 0.84rem; }
+
+  /* info */
+  .info {
+    display: grid; gap: 0;
+    border: 1px solid var(--line); background: #fdfaf3;
+  }
+  .info-row {
+    display: grid; grid-template-columns: 92px 1fr; gap: 14px;
+    padding: 16px 20px; border-bottom: 1px solid var(--line);
+    font-size: 0.9rem;
+  }
+  .info-row:last-child { border-bottom: none; }
+  .info-row dt { color: var(--muted); font-size: 0.82rem; letter-spacing: 0.1em; }
+  .info-row dd a { color: var(--kuro); }
+  .access-note { font-size: 0.82rem; color: var(--muted); margin-top: 16px; line-height: 1.9; }
+
+  .cta-final {
+    background: var(--paper-deep);
+    border-top: 1px solid var(--line);
+    text-align: center;
+    padding: 56px 22px 64px;
+  }
+  .cta-final h2 { font-size: clamp(1.25rem, 3.2vw, 1.65rem); font-weight: 600; letter-spacing: 0.1em; margin-bottom: 10px; }
+  .cta-final p { font-size: 0.86rem; color: var(--muted); margin-bottom: 26px; }
+  .cta-final .btn-row { justify-content: center; }
+  .cta-tel { font-size: 1.5rem; letter-spacing: 0.05em; color: var(--kuro); text-decoration: none; display: inline-block; margin-bottom: 24px; }
+
+  footer {
+    text-align: center; padding: 30px 20px 96px;
+    font-size: 0.74rem; color: var(--muted); line-height: 1.9;
+    border-top: 1px solid var(--line);
+  }
+
+  /* mobile bar */
+  .mobile-bar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
+    display: flex; gap: 8px; padding: 9px 12px;
+    background: rgba(247, 242, 232, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--line);
+  }
+  .mobile-bar a {
+    flex: 1; text-align: center; padding: 12px 0; border-radius: 2px;
+    text-decoration: none; font-size: 0.86rem; letter-spacing: 0.06em;
+  }
+  @media (min-width: 860px) { .mobile-bar { display: none; } footer { padding-bottom: 34px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="./">
+      <span class="brand-main">武田屋</span>
+      <span class="brand-sub sans">八幡饅頭 ／ 今治市玉川町</span>
+    </a>
+    <nav class="nav-links sans">
+      <a href="#story">八幡饅頭について</a>
+      <a href="#kodawari">こだわり</a>
+      <a href="#price">お品と価格</a>
+      <a href="#gift">ご贈答</a>
+      <a href="#access">店舗情報</a>
+    </nav>
+    <div class="header-right">
+      <a class="header-tel sans" href="tel:0898553403"><strong>0898-55-3403</strong></a>
+      <a class="header-cta sans" href="#access">ご注文・ご予約</a>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-photo">
+    <img src="./exterior.jpg" alt="武田屋 八幡饅頭の店舗外観（今治市玉川町八幡）" />
+  </div>
+  <div class="hero-copy">
+    <div class="eyebrow sans">愛媛県今治市 玉川町八幡 ／ 四国八十八ヶ所 57番 栄福寺のほど近く</div>
+    <h1>八幡饅頭をつくるのは、<br />いま<em>この一軒</em>だけ。</h1>
+    <p class="hero-lead">
+      江戸が終わったとき、この土地の武士たちは刀を調理道具に持ち替え、
+      ひとつの饅頭を伝えました。黒糖の香り、かたくなりにくい生地、しっとりした餡。
+      その味を100年以上守りつづけているのが、武田屋です。
+    </p>
+    <div class="btn-row sans">
+      <a class="btn btn-primary" href="tel:0898553403">📞 0898-55-3403 に電話する</a>
+      <a class="btn btn-outline" href="https://maps.google.com/?cid=17218794606877955596" target="_blank" rel="noopener">📍 Googleマップで開く</a>
+    </div>
+  </div>
+</div>
+
+<div class="facts">
+  <div class="facts-inner sans">
+    <span>黒糖は国内産を100％使用</span>
+    <span>添加物はふくらし粉のみ</span>
+    <span>お召し上がりは八幡饅頭のみ</span>
+  </div>
+</div>
+
+<section id="story">
+  <div class="sec-head">
+    <div class="sec-label sans">ABOUT</div>
+    <h2 class="sec-title">玉川名物は、いまや今治名物。</h2>
+    <p class="sec-sub sans">八幡饅頭の歴史と、武田屋の歩み</p>
+  </div>
+  <div class="story">
+    <figure>
+      <img src="./entrance.jpg" alt="武田屋 八幡饅頭の店先。木の庇と「武田屋 八幡饅頭」の看板" />
+      <figcaption class="sans">玉川町八幡甲319-2。お遍路道から少し入った、静かな店構え。</figcaption>
+    </figure>
+    <div>
+      <p>
+        八幡饅頭は、今治市玉川町の八幡地区に古くから伝わるお饅頭です。
+        江戸時代が終わって職を失った武士たちが、この地方一帯でつくりはじめ——
+        やがて長く受け継がれ、<strong>現在も製造販売をつづけているのは武田屋一軒のみ</strong>となりました。
+      </p>
+      <p>
+        名前の「八幡」は、お店のあるこの土地の名から。四国八十八ヶ所の57番札所・栄福寺から
+        58番仙遊寺へ向かう遍路道の途中にあり、昔から歩きお遍路さんが立ち寄って
+        ひと息ついていく場所でもあります。
+      </p>
+      <p class="quote">
+        黒糖の風味と、日がたってもかたくなりにくい生地。<br />
+        蒸したての八幡饅頭は、また格別です。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="kodawari">
+  <div class="sec-head">
+    <div class="sec-label sans">CRAFT</div>
+    <h2 class="sec-title">四つの材料と、ふくらし粉だけ。</h2>
+    <p class="sec-sub sans">創業以来つづく、足し算をしない饅頭づくり</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-no sans">01</div>
+      <h3>黒糖は、国内産を100％。</h3>
+      <p>餡に使うのは国内産の黒糖だけ。コクがありながら、あとをひかない控えめな甘さに仕上げています。</p>
+    </div>
+    <div class="card">
+      <div class="card-no sans">02</div>
+      <h3>添加物は、ふくらし粉のみ。</h3>
+      <p>創業以来、ふくらし粉以外の添加物は一切使っていません。お子さまからご年配の方まで、安心してお召し上がりいただけます。</p>
+    </div>
+    <div class="card">
+      <div class="card-no sans">03</div>
+      <h3>小豆、黒糖、小麦粉、卵。</h3>
+      <p>材料はとてもシンプル。だからこそ、ごまかしがききません。うすかわにたっぷりの餡、ひと口で食べられる大きさです。</p>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="sec-head">
+    <div class="sec-label sans">PRODUCT</div>
+    <h2 class="sec-title">お品は、八幡饅頭だけ。</h2>
+    <p class="sec-sub sans">何個入りをお選びになるか、それだけです。</p>
+  </div>
+  <div class="price-wrap">
+    <div class="price-block">
+      <h3>お包み <small class="sans">包み紙でお包みします</small></h3>
+      <div class="price-row"><span>12個入り</span><span class="num">855円</span></div>
+      <div class="price-row"><span>16個入り</span><span class="num">1,140円</span></div>
+      <div class="price-row"><span>20個入り</span><span class="num">1,425円</span></div>
+      <div class="price-row"><span>24個入り</span><span class="num">1,710円</span></div>
+    </div>
+    <div class="price-block">
+      <h3>お箱 <small class="sans">ご贈答・ご進物に</small></h3>
+      <div class="price-row"><span>15個入り</span><span class="num">1,230円</span></div>
+      <div class="price-row"><span>28個入り</span><span class="num">2,208円</span></div>
+      <div class="price-row"><span>48個入り</span><span class="num">3,628円</span></div>
+      <div class="price-row"><span>50個入り</span><span class="num">3,770円</span></div>
+    </div>
+  </div>
+  <div class="kakei sans">
+    <span class="stamp">必勝</span>
+    <span class="stamp">祝</span>
+    <span class="stamp">寿</span>
+    <span>— 焼き印は「必勝」「祝」「寿」をご用意しています。ご相談ください。</span>
+  </div>
+  <p class="price-note sans">
+    ばら売りは1個71円です。<br />
+    ※価格は変更となる場合があります。ご注文時に店頭またはお電話でご確認ください。
+  </p>
+</section>
+
+<div class="band">
+  <img src="./noren.jpg" alt="武田屋の店先に下がる藍の暖簾と、お客さまが腰かけて食べられる縁台" />
+  <div class="band-copy">
+    <div class="band-inner">
+      <h2>遍路道の途中で、<br />ひとつ、いかがですか。</h2>
+      <p class="sans">
+        店先には休憩できるスペースを用意しています。
+        開店してすぐの時間なら、蒸しあがったばかりの八幡饅頭に出会えるかもしれません。
+      </p>
+    </div>
+  </div>
+</div>
+
+<section id="gift">
+  <div class="sec-head">
+    <div class="sec-label sans">GIFT</div>
+    <h2 class="sec-title">手土産にも、ご進物にも。</h2>
+    <p class="sec-sub sans">今治を訪れた記念に、贈る方にも喜ばれる素朴な味</p>
+  </div>
+  <div class="gift">
+    <ul class="gift-list sans">
+      <li><b>ご贈答</b><span>お箱入りはご贈答用に。のし・包装についてはお電話でご相談ください。</span></li>
+      <li><b>焼き印</b><span>「必勝」「祝」「寿」。合格・就職・お祝いごとに、縁起を添えて。</span></li>
+      <li><b>ご予約</b><span>電話・店頭にて承ります。数が多い場合はお早めにご連絡ください。</span></li>
+      <li><b>日持ち</b><span>日がたつほど餡がしっとりとなじみます。時間がたっても生地はかたくなりにくいのが八幡饅頭です。</span></li>
+      <li><b>お支払い</b><span>現金にて承ります（カード・電子マネーはご利用いただけません）。</span></li>
+    </ul>
+    <div class="card" style="padding: 30px 26px;">
+      <h3 style="font-size:1.05rem; margin-bottom:14px;">遠方へのお届けについて</h3>
+      <p style="color: var(--ink-soft); font-size:0.9rem;">
+        発送については、内容・お届け先・時期によってご案内が変わります。
+        まずはお電話（0898-55-3403）にてお気軽にお問い合わせください。
+      </p>
+      <div class="btn-row sans" style="margin-top:22px;">
+        <a class="btn btn-primary" href="tel:0898553403">電話で相談する</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="sec-head">
+    <div class="sec-label sans">SHOP</div>
+    <h2 class="sec-title">店舗情報</h2>
+    <p class="sec-sub sans">JR今治駅からお車で約15分。駐車場があります。</p>
+  </div>
+  <dl class="info sans">
+    <div class="info-row"><dt>店名</dt><dd>武田屋 八幡饅頭</dd></div>
+    <div class="info-row"><dt>住所</dt><dd>〒794-0114 愛媛県今治市玉川町八幡甲319-2</dd></div>
+    <div class="info-row"><dt>電話</dt><dd><a href="tel:0898553403">0898-55-3403</a></dd></div>
+    <div class="info-row"><dt>営業時間</dt><dd>8:00 〜 18:00</dd></div>
+    <div class="info-row"><dt>定休日</dt><dd>1月1日・1月2日（そのほかは無休）</dd></div>
+    <div class="info-row"><dt>駐車場</dt><dd>あり</dd></div>
+    <div class="info-row"><dt>アクセス</dt><dd>JR今治駅から車で約15分／四国八十八ヶ所 57番 栄福寺からほど近く</dd></div>
+    <div class="info-row"><dt>Googleマップ</dt><dd><a href="https://maps.google.com/?cid=17218794606877955596" target="_blank" rel="noopener">地図を見る（経路案内）</a></dd></div>
+  </dl>
+  <p class="access-note sans">
+    ※営業時間・定休日は変更となる場合があります。お出かけ前にお電話でご確認ください。
+  </p>
+</section>
+
+<div class="cta-final">
+  <h2>ご注文・ご予約は、お電話で。</h2>
+  <p class="sans">お箱入り・焼き印・遠方へのお届けなど、お気軽にご相談ください。</p>
+  <a class="cta-tel sans" href="tel:0898553403">0898-55-3403</a>
+  <div class="btn-row sans">
+    <a class="btn btn-primary" href="tel:0898553403">📞 電話をかける</a>
+    <a class="btn btn-outline" href="https://maps.google.com/?cid=17218794606877955596" target="_blank" rel="noopener">📍 地図・経路をひらく</a>
+  </div>
+</div>
+
+<footer class="sans">
+  武田屋 八幡饅頭 ／ 愛媛県今治市玉川町八幡甲319-2 ／ TEL 0898-55-3403<br />
+  本ページはWeb制作提案用のデモページです。写真はGoogleマップの投稿写真を使用しています。
+</footer>
+
+<div class="mobile-bar sans">
+  <a href="tel:0898553403" style="background: var(--kuro); color: var(--paper);">📞 電話する</a>
+  <a href="https://maps.google.com/?cid=17218794606877955596" target="_blank" rel="noopener" style="border: 1px solid var(--kuro); color: var(--kuro);">📍 地図</a>
+</div>
+
+</body>
+</html>
