@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>正岡商店（タオルショップまさおか）｜今治の名入れタオル・オリジナルタオル製作</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="正岡商店（タオルショップまさおか）｜今治の名入れタオル・オリジナルタオル製作">
+<meta property="og:description" content="今治のタオル産地で、名入れ・オリジナルタオル・プリント加工のご相談を承ります。">
+<meta name="description" content="愛媛県今治市の正岡商店（タオルショップまさおか）。タオル製品の製造・販売、名入れ、オリジナルタオル、マイクロファイバークロス、日本てぬぐい、風呂敷、名入れ軍手。プリント・織り・刺繍など目的と数量に合わせてご提案します。">
+<style>
+:root{
+  --bg:#f7f4ee; --bg2:#efe9dd; --white:#fff; --text:#22252a; --muted:#5b6068;
+  --navy:#1f3a5f; --ai:#2f5d7c; --line:#ddd5c6;
+  --serif:'Hiragino Mincho ProN','Yu Mincho',serif;
+  --sans:'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;
+  --hh:64px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh) + 12px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.9;overflow-wrap:anywhere;word-break:normal}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ai)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.5;margin:0}
+
+/* Header */
+.header{position:fixed;inset:0 0 auto 0;height:var(--hh);background:rgba(247,244,238,.96);border-bottom:1px solid var(--line);z-index:100}
+.header .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{text-decoration:none;color:var(--navy);display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+.logo b{font-family:var(--serif);font-size:22px;letter-spacing:.08em}
+.logo small{font-size:12px;color:var(--muted);letter-spacing:.1em}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:28px}
+.nav a{color:var(--text);text-decoration:none;font-size:14px;letter-spacing:.05em}
+.nav a:hover{color:var(--ai)}
+.nav .nav-cta{background:var(--navy);color:#fff;padding:8px 16px;border-radius:4px}
+.nav .nav-cta:hover{color:#fff;background:var(--ai)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:4px;width:44px;height:40px;padding:0;cursor:pointer}
+.menu-btn span{display:block;width:20px;height:1.5px;background:var(--navy);margin:5px auto;transition:.2s}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* Hero */
+.hero{padding:calc(var(--hh) + 80px) 0 90px;
+  background:
+   repeating-linear-gradient(90deg,rgba(31,58,95,.035) 0 1px,transparent 1px 6px),
+   repeating-linear-gradient(0deg,rgba(255,255,255,.5) 0 2px,transparent 2px 5px),
+   linear-gradient(135deg,#f7f4ee 0%,#eee7d8 55%,#e3e6e6 100%);
+  border-bottom:1px solid var(--line)}
+.hero .en{font-size:12px;letter-spacing:.3em;color:var(--ai);margin:0 0 16px}
+.hero h1{font-size:clamp(26px,4.2vw,42px);color:var(--navy);letter-spacing:.04em;max-width:860px}
+.hero p.lead{margin:24px 0 36px;max-width:720px;color:#3a3e45}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;text-decoration:none;padding:14px 26px;border-radius:4px;font-size:15px;letter-spacing:.05em;border:1px solid var(--navy);text-align:center}
+.btn-p{background:var(--navy);color:#fff}
+.btn-p:hover{background:var(--ai);border-color:var(--ai)}
+.btn-s{background:rgba(255,255,255,.7);color:var(--navy)}
+.btn-s:hover{background:#fff}
+
+/* Sections */
+section{padding:96px 0}
+.alt{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{margin-bottom:48px}
+.sec-head .en{display:block;font-size:12px;letter-spacing:.3em;color:var(--ai);margin-bottom:8px}
+.sec-head h2{font-size:clamp(22px,3vw,30px);color:var(--navy)}
+.sec-head p{margin:14px 0 0;color:var(--muted);max-width:760px}
+
+.grid{display:grid;gap:20px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:0 1px 3px rgba(34,37,42,.04);padding:24px}
+.alt .card{background:var(--bg)}
+.card h3{font-size:18px;color:var(--navy);margin-bottom:8px}
+.card p{margin:0;font-size:14.5px;color:#3a3e45}
+.reason .num{font-family:var(--serif);color:var(--ai);font-size:14px;letter-spacing:.15em;display:block;margin-bottom:10px}
+.reason svg{width:34px;height:34px;stroke:var(--ai);fill:none;stroke-width:1.4;margin-bottom:12px}
+.pc .no{font-size:12px;color:var(--ai);letter-spacing:.1em}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tag{font-size:12px;line-height:1.5;padding:2px 10px;border:1px solid #c9d4de;color:var(--ai);background:#f2f5f8;border-radius:999px}
+.purpose .q{font-family:var(--serif);font-size:17px;color:var(--navy);margin-bottom:10px}
+.purpose .a{font-size:14.5px}
+.purpose .a strong{color:var(--ai)}
+
+
+/* Products */
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pcard{margin:0;background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;box-shadow:0 1px 3px rgba(34,37,42,.04)}
+.pcard img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.pcard figcaption{padding:12px 14px 14px;font-size:13.5px;color:var(--muted);line-height:1.6}
+.pcard figcaption strong{display:block;font-family:var(--serif);font-size:15px;color:var(--navy);margin-bottom:2px}
+@media (max-width:1000px){.pgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.pgrid{grid-template-columns:1fr}}
+
+/* Tables */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:6px;background:#fff}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:14px 18px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+tr:last-child th,tr:last-child td{border-bottom:none}
+.size th,.size td{white-space:nowrap}
+.size thead th{background:var(--navy);color:#fff;font-weight:500;font-size:14px}
+.size tbody th{background:var(--bg);font-weight:600;color:var(--navy)}
+.co th{width:180px;background:var(--bg);color:var(--navy);font-weight:600;white-space:nowrap}
+.note{font-size:13px;color:var(--muted);margin-top:12px}
+.co-flex{display:grid;grid-template-columns:1fr;gap:28px;align-items:start}
+.ph{aspect-ratio:4/3;background:repeating-linear-gradient(90deg,#efe9dd 0 2px,#f5f1e8 2px 6px);border:1px dashed var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;overflow:hidden}
+
+/* Contact */
+.contact{background:var(--navy);color:#fff;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 1px,transparent 1px 6px),linear-gradient(135deg,#1f3a5f,#2f5d7c)}
+.contact .sec-head .en{color:#bcd0e0}
+.contact .sec-head h2{color:#fff}
+.contact .sec-head p{color:#dfe7ee}
+.tel-main{display:inline-block;font-family:var(--serif);font-size:clamp(30px,6vw,48px);color:#fff;text-decoration:none;letter-spacing:.05em;line-height:1.3}
+.tel-label{font-size:13px;letter-spacing:.15em;color:#bcd0e0;margin:0}
+.contact-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:32px}
+.sub-tels{margin:20px 0 0;padding:0;list-style:none;font-size:15px}
+.sub-tels a{color:#fff}
+.btn-w{background:#fff;color:var(--navy);border-color:#fff;margin-top:24px}
+.btn-w:hover{background:var(--bg)}
+
+/* Footer */
+.footer{background:#17212e;color:#c8ced6;padding:40px 0;font-size:14px}
+.footer .name{font-family:var(--serif);color:#fff;font-size:18px;margin-bottom:6px}
+.footer a{color:#c8ced6}
+.footer .copy{margin-top:18px;font-size:12px;color:#8b95a1}
+
+@media (max-width:1000px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:820px){
+  .menu-btn{display:block}
+  .nav{position:fixed;top:var(--hh);left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);display:none}
+  .nav.open{display:block}
+  .nav ul{flex-direction:column;gap:0;padding:8px 20px 20px}
+  .nav li a{display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+  .nav .nav-cta{margin-top:14px;text-align:center;border:none}
+  .co-flex{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  section{padding:64px 0}
+  .hero{padding:calc(var(--hh) + 48px) 0 60px}
+  .g4,.g3,.g2{grid-template-columns:1fr}
+  .logo small{display:none}
+  .btn{width:100%}
+  .co th{width:auto;white-space:normal;display:block;border-bottom:none;padding-bottom:4px}
+  .co td{display:block;padding-top:4px}
+  .contact-box{padding:24px 18px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <a href="#top" class="logo"><b>正岡商店</b><small>タオルショップ まさおか</small></a>
+    <button class="menu-btn" aria-label="メニュー" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="#print">プリント・加工</a></li>
+        <li><a href="#size">仕様・サイズ</a></li>
+        <li><a href="#company">会社概要</a></li>
+        <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <p class="en">IMABARI TOWEL ／ SINCE 1960</p>
+      <h1>名入れタオル・オリジナルタオルのご相談は、<br>今治のタオル産地 正岡商店へ</h1>
+      <p class="lead">タオル工場・染色工場・プリント工場・縫製工場・刺繍工場が集まる日本一のタオル生産地、今治。正岡商店はこの産地で、お客様のニーズに応えるタオルをスピーディに、最適な方法で生産・提供しています。ご相談内容に応じて、ご要望に合ったタオルをご提案します。</p>
+      <div class="btns">
+        <a href="#print" class="btn btn-p">プリント・加工の種類を見る</a>
+        <a href="#contact" class="btn btn-s">サンプル・お見積りを相談する</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="reason">
+    <div class="wrap">
+      <div class="sec-head"><span class="en">WHY MASAOKA</span><h2>正岡商店が選ばれる理由</h2></div>
+      <div class="grid g4">
+        <div class="card reason">
+          <svg viewBox="0 0 34 34"><path d="M4 28V12l8 5V12l8 5V8h10v20z"/><path d="M4 28h26"/></svg>
+          <span class="num">01</span>
+          <h3>今治の産地で製造</h3>
+          <p>多様な工場が集まる今治で、タオル製品の製造・名入れ・オリジナルタオルを手がけています。</p>
+        </div>
+        <div class="card reason">
+          <svg viewBox="0 0 34 34"><circle cx="17" cy="17" r="12"/><path d="M17 9v8l5 4"/></svg>
+          <span class="num">02</span>
+          <h3>目的と数量で方式を選べる</h3>
+          <p>デザイン・用途・枚数に合わせて、最適なプリント・加工方法をご提案します。</p>
+        </div>
+        <div class="card reason">
+          <svg viewBox="0 0 34 34"><rect x="5" y="20" width="6" height="9"/><rect x="14" y="14" width="6" height="15"/><rect x="23" y="7" width="6" height="22"/></svg>
+          <span class="num">03</span>
+          <h3>1枚から量産まで</h3>
+          <p>1枚から作れるインクジェットプリントから、型を使う量産向けのプリントまで対応します。</p>
+        </div>
+        <div class="card reason">
+          <svg viewBox="0 0 34 34"><path d="M5 9h24M5 15h24M5 21h24M5 27h24"/><path d="M11 5v26M23 5v26"/></svg>
+          <span class="num">04</span>
+          <h3>織り・刺繍・特殊プリント</h3>
+          <p>ジャガード織り・刺繍・写真を織り込むタオルや、水やお湯で変化する特殊プリントも承ります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="print" class="alt">
+    <div class="wrap">
+      <div class="sec-head"><span class="en">PRINT &amp; PROCESSING</span><h2>プリント・加工の種類</h2><p>デザインや数量、ご予算に合わせてお選びいただけます。どの方式が合うか分からない場合も、お気軽にご相談ください。</p></div>
+      <div class="grid g3">
+        <div class="card pc"><span class="no">01</span><h3>インクジェット顔料プリント</h3><p>タオル・日本手ぬぐいに直接顔料プリント。1枚から作成でき、30枚ぐらいまでは型を作るより割安です。何色使っても型代は不要です。</p><div class="tags"><span class="tag">型代不要</span><span class="tag">1枚から</span><span class="tag">フルカラー向き</span></div></div>
+        <div class="card pc"><span class="no">02</span><h3>写真製版顔料プリント</h3><p>写真を4色に分解して型を作り、重ねてプリントします。指定色は特色を追加できます。型代は通常の1.5倍ですが、数量が多い場合や、バスタオルなどプリント面積が広い場合はインクジェットより安くなります。プリントはタオルの端にかからない内側のみです。</p><div class="tags"><span class="tag">写真向き</span><span class="tag">数量が多い場合に</span></div></div>
+        <div class="card pc"><span class="no">03</span><h3>昇華転写プリント</h3><p>ポリエステル100%のマイクロファイバー生地に染料を封じ込め、絵画・イラスト・写真も鮮明に表現します。綿のタオルには使えません。表マイクロファイバー／裏綿パイルの生地もあります。</p><div class="tags"><span class="tag">写真向き</span><span class="tag">マイクロファイバー</span></div></div>
+        <div class="card pc"><span class="no">04</span><h3>インクジェット染料プリント</h3><p>フルカラーで細部まで表現します。型代が不要なため、少数ならシルクプリントより安くなります。反物にプリントしてカットするため、周囲はメロウミシン仕上げです。</p><div class="tags"><span class="tag">型代不要</span><span class="tag">フルカラー</span></div></div>
+        <div class="card pc"><span class="no">05</span><h3>染料／顔料プリント（シルクスクリーン）</h3><p>型を通して柄を染め、後処理で色を固定します。プリントが端にかかると全面プリントとなり、プリント代・型代とも高くなります。細かい柄はデザインに注意が必要です。</p><div class="tags"><span class="tag">型を使う定番方式</span></div></div>
+        <div class="card pc"><span class="no">06</span><h3>印刷タオル</h3><p>白タオルやカラータオルの平織り部分の片側または両側に、1色で印刷します。</p><div class="tags"><span class="tag">1色印刷</span></div></div>
+        <div class="card pc"><span class="no">07</span><h3>おぼろ捺染タオル（オボロタオル）</h3><p>特殊な横糸を使い、横糸だけに着色して文字や柄を表します。</p></div>
+        <div class="card pc"><span class="no">08</span><h3>ジャガード織りタオル</h3><p>パイルの上げ落ちで文字や柄を出し、横糸に色糸を使って文字の部分や全体に変化をつけます。</p><div class="tags"><span class="tag">織り</span></div></div>
+        <div class="card pc"><span class="no">09</span><h3>ジャガード織り染めタオル</h3><p>パイルの上げ落ちで柄を出してから染色します。単価・型代は、デザインの大きさや染め色・濃度によって変わります。</p><div class="tags"><span class="tag">織り</span></div></div>
+        <div class="card pc"><span class="no">10</span><h3>毛違いジャガード織りタオル</h3><p>主に2色の糸で柄を表し、表と裏の配色が逆になります。線の太さは2〜3mm必要です。工場在庫の糸色なら小ロットから織れます。</p><div class="tags"><span class="tag">織り</span><span class="tag">リバーシブル配色</span></div></div>
+        <div class="card pc"><span class="no">11</span><h3>朱子織りタオル</h3><p>横糸で柄を表し、刺繍のように小さな文字や柄を表現できます。主にタオルの両端（ヘム）などに横方向に織り込みます。</p><div class="tags"><span class="tag">織り</span><span class="tag">小さな文字向き</span></div></div>
+        <div class="card pc"><span class="no">12</span><h3>刺繍タオル</h3><p>刺繍の型を作り、デザイン通りに刺繍します。針数はデザインの大きさや内容で変わり（日本語はローマ字より多め）、型代・単価もそれに応じて変わります。ベースのタオルはいろいろ選べます。</p><div class="tags"><span class="tag">刺繍</span><span class="tag">高級感</span></div></div>
+        <div class="card pc"><span class="no">13</span><h3>ミラクルプリントタオル（マジックプリントタオル）</h3><p>水に反応する染料でプリントします。水につけると、カラータオルの表面に白い文字やデザインが浮かび上がります。</p><div class="tags"><span class="tag">特殊プリント</span><span class="tag">水で変化</span></div></div>
+        <div class="card pc"><span class="no">14</span><h3>不思議なタオル（温感プリントタオル）</h3><p>お風呂のお湯に浸けると絵が変わります。綿100%（日本製）です。</p><div class="tags"><span class="tag">特殊プリント</span><span class="tag">お湯で変化</span></div></div>
+        <div class="card pc"><span class="no">15</span><h3>プレス（圧縮）タオル</h3><p>タオルをいろいろな形に圧縮します。水につけるか手でほぐすと、元のタオルに戻ります。</p><div class="tags"><span class="tag">ノベルティ向き</span></div></div>
+        <div class="card pc"><span class="no">16</span><h3>日本手ぬぐい</h3><p>顔料プリントと注染があります。顔料プリントは細かな柄が出せ、裏までは抜けません。注染は裏まで染まりますが、柄や色に制限があります。</p><div class="tags"><span class="tag">顔料プリント</span><span class="tag">注染</span></div></div>
+        <div class="card pc"><span class="no">17</span><h3>タオルハンカチ</h3><p>プリント生地を在庫しており、300枚から製作できます。約20×20cm、直径21cmの円形、約25×25cm、約25×30cm、表ガーゼ、2色毛違いジャガード織りがあります。在庫生地を使った刺繍入りは100枚からです。</p><div class="tags"><span class="tag">小ロット</span><span class="tag">刺繍対応</span></div></div>
+      </div>
+      <p class="note">※このほか、写真・CG画像・文字を織り込む「美写紋タオル」、パイルの上げ落ちでロゴを表す「織り姫タオル」なども承ります。</p>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="wrap">
+      <div class="sec-head"><span class="en">PRODUCTS</span><h2>製品例</h2><p>これまでに手がけてきたタオルの一部です（御社サイト掲載の製品画像より）。</p></div>
+      <div class="pgrid">
+        <figure class="pcard"><img src="./photo_sublimation.jpg" alt="写真をプリントしたタオル" loading="lazy"><figcaption><strong>写真プリント</strong>写真・イラストをタオルに</figcaption></figure>
+        <figure class="pcard"><img src="./photo_embroidery.jpg" alt="刺繍を入れたタオルハンカチ" loading="lazy"><figcaption><strong>刺繍</strong>名前やイラストを刺繍で</figcaption></figure>
+        <figure class="pcard"><img src="./photo_jacquard.jpg" alt="文字を織り込んだジャガード織りタオル" loading="lazy"><figcaption><strong>ジャガード織り</strong>文字や柄を織りで表現</figcaption></figure>
+        <figure class="pcard"><img src="./photo_handkerchief.jpg" alt="プリントしたタオルハンカチ" loading="lazy"><figcaption><strong>タオルハンカチ</strong>プリント生地を在庫</figcaption></figure>
+      </div>
+      <p class="note">※写真は御社サイトに掲載されている製品画像を、提案用に引用させていただいています。</p>
+    </div>
+  </section>
+
+  <section id="purpose">
+    <div class="wrap">
+      <div class="sec-head"><span class="en">HOW TO CHOOSE</span><h2>目的別の選び方</h2></div>
+      <div class="grid g2">
+        <div class="card purpose"><p class="q">少ない枚数でノベルティを作りたい</p><p class="a"><strong>インクジェット顔料プリント</strong>　1枚から作成でき、何色使っても型代は不要です。</p></div>
+        <div class="card purpose"><p class="q">写真を鮮明に表現したい</p><p class="a"><strong>写真製版顔料プリント／昇華転写プリント</strong>　写真を4色に分解してプリントする方法と、マイクロファイバー生地に鮮明に定着させる方法があります。</p></div>
+        <div class="card purpose"><p class="q">記念品に高級感を持たせたい</p><p class="a"><strong>美写紋タオル／ジャガード織り／刺繍タオル</strong>　織りや刺繍で表すため、プリントのように色落ちを気にせず使えます（美写紋）。</p></div>
+        <div class="card purpose"><p class="q">水やお湯で変化する演出をしたい</p><p class="a"><strong>ミラクルプリントタオル／不思議なタオル</strong>　水につけると文字が浮かぶタオル、お湯で絵が変わるタオルがあります。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="size" class="alt">
+    <div class="wrap">
+      <div class="sec-head"><span class="en">SPECIFICATIONS</span><h2>定番サイズ（タオル生地）</h2><p>定番プリント生地のサイズです。</p></div>
+      <div class="tbl-wrap">
+        <table class="size">
+                      <thead><tr><th>品目</th><th>目方</th><th>パイル</th><th>サイズ</th><th>生産国</th></tr></thead>
+                      <tbody>
+                        <tr><th>シャーリングハンドタオル</th><td>140匁</td><td>30/2</td><td>約34×37cm</td><td>中国</td></tr>
+                        <tr><th rowspan="4">シャーリングフェイスタオル</th><td>260匁</td><td>20/1</td><td>約34×88cm</td><td>中国</td></tr>
+                        <tr><td>300匁</td><td>30/2</td><td>約34×88cm</td><td>中国</td></tr>
+                        <tr><td>320匁</td><td>30/2</td><td>約34×85cm</td><td>中国</td></tr>
+                        <tr><td>330匁（織り）</td><td>30/2</td><td>約34×88cm</td><td>日本</td></tr>
+                        <tr><th rowspan="4">シャーリングマフラー</th><td>260匁</td><td>20/1</td><td>約20×113cm</td><td>中国</td></tr>
+                        <tr><td>280匁</td><td>30/2</td><td>約20×113cm</td><td>中国</td></tr>
+                        <tr><td>300匁</td><td>30/2</td><td>約21×110cm</td><td>中国</td></tr>
+                        <tr><td>330匁（織り）</td><td>30/2</td><td>約20×115cm</td><td>日本</td></tr>
+                        <tr><th rowspan="3">シャーリングスポーツタオル</th><td>500匁</td><td>20/1</td><td>約40×115cm</td><td>中国</td></tr>
+                        <tr><td>550匁</td><td>30/2</td><td>約40×115cm</td><td>中国</td></tr>
+                        <tr><td>630匁（織り）</td><td>30/2</td><td>約40×115cm</td><td>日本</td></tr>
+                        <tr><th rowspan="2">シャーリングバスタオル</th><td>850匁</td><td>30/2</td><td>約60×120cm</td><td>中国</td></tr>
+                        <tr><td>1000匁（織り）</td><td>30/2</td><td>約60×125cm</td><td>日本</td></tr>
+                        <tr><th>大判シャーリングバスタオル</th><td>1200匁</td><td>20/1</td><td>約82×156cm</td><td>中国</td></tr>
+                      </tbody>
+                    </table>
+      </div>
+      <p class="note">※スマートフォンでは表を横にスクロールしてご覧ください。</p>
+      <div class="grid g2" style="margin-top:32px">
+        <div class="card"><h3>今治タオル関連</h3><p>今治白いタオル、今治エコタオル、すごいタオル、OHTタオル、サンホーキン綿糸使用ホテル向け高級タオル</p></div>
+        <div class="card"><h3>Made in Imabari</h3><p>やさしいぬくもりタオルマフラー、アメリカンシャーリングカラータオル、MSカラーシャーリングタオル</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="company">
+    <div class="wrap">
+      <div class="sec-head"><span class="en">COMPANY</span><h2>会社概要</h2></div>
+      <div class="co-flex">
+        <div class="tbl-wrap">
+          <table class="co">
+            <tr><th>社名</th><td>正岡商店（タオルショップまさおか）</td></tr>
+            <tr><th>創業</th><td>昭和35年（1960年）</td></tr>
+            <tr><th>従業員数</th><td>9人</td></tr>
+            <tr><th>代表者</th><td>正岡 政範</td></tr>
+            <tr><th>事業内容</th><td>タオル製品製造、販売、名入、オリジナルタオル、マイクロファイバークロス、日本てぬぐい、風呂敷、名入れ軍手</td></tr>
+            <tr><th>事務所</th><td>〒794-0026 愛媛県今治市別宮町1丁目1-14<br>Tel <a href="tel:0898225612">0898-22-5612</a>／Fax 0898-32-3702</td></tr>
+            <tr><th>配送部・企画部</th><td>愛媛県今治市四村福田270-5<br>配送部 Tel <a href="tel:0898225047">0898-22-5047</a><br>企画部 Tel <a href="tel:0898225057">0898-22-5057</a><br>Fax 0898-22-5152</td></tr>
+            <tr><th>取引銀行</th><td>伊予銀行 今治支店<br>百十四銀行 今治支店</td></tr>
+          </table>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="sec-head"><span class="en">CONTACT</span><h2>サンプル・お見積りのご相談</h2><p>オリジナルタオル・名入れタオルのご相談は、お電話またはお問い合わせフォームからどうぞ。デザインや枚数、用途をお聞かせいただければ、内容に合ったタオルとプリント・加工方法をご提案します。</p></div>
+      <div class="contact-box">
+        <p class="tel-label">お電話でのお問い合わせ（事務所）</p>
+        <a class="tel-main" href="tel:0898225612">0898-22-5612</a>
+        <ul class="sub-tels">
+          <li>企画部 Tel <a href="tel:0898225057">0898-22-5057</a></li>
+          <li>配送部 Tel <a href="tel:0898225047">0898-22-5047</a></li>
+        </ul>
+        <a class="btn btn-w" href="http://masaoka-shoten.com/contact.html" target="_blank" rel="noopener">お問い合わせフォームへ</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="name">正岡商店（タオルショップまさおか）</p>
+    <div>〒794-0026 愛媛県今治市別宮町1丁目1-14</div>
+    <div>Tel <a href="tel:0898225612">0898-22-5612</a>／Fax 0898-32-3702</div>
+    <p class="copy">※このページは提案用に作成したデモページです。掲載内容は正岡商店の公開情報にもとづいています。<br>写真は正岡商店サイトの製品画像より引用しています。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){
+    var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o);
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+  });
+})();
+</script>
+</body>
+</html>
