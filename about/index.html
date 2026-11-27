@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>制作のご案内・料金｜今治のお店のための1ページホームページ</title>
+<meta name="description" content="今治市内の店舗・事業者向けに、スマホで見やすい1ページのホームページ（LP）を買い切り30,000円で制作します。料金・できること・進め方をご案内します。" />
+<style>
+  :root {
+    --bg: #faf8f5;
+    --paper: #ffffff;
+    --ink: #221f1c;
+    --ink-soft: #4b453e;
+    --muted: #6f675e;
+    --faint: #9a9187;
+    --line: #e5dfd5;
+    --accent: #b36d2b;
+    --accent-soft: #f3e7d8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+  /* header */
+  header {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(250, 248, 245, 0.94);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner {
+    max-width: 760px; margin: 0 auto; padding: 12px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .brand { text-decoration: none; display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+  .brand-main { font-size: 0.95rem; font-weight: 700; letter-spacing: 0.08em; }
+  .brand-sub { font-size: 0.62rem; color: var(--faint); letter-spacing: 0.2em; }
+  .header-link {
+    font-size: 0.78rem; text-decoration: none; color: var(--ink-soft);
+    border: 1px solid var(--line); background: #fff; padding: 7px 12px;
+    border-radius: 999px; white-space: nowrap; flex: 0 0 auto;
+  }
+  .header-link:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* hero */
+  .hero { padding: 56px 0 44px; }
+  .eyebrow { font-size: 0.66rem; letter-spacing: 0.28em; color: var(--accent); margin-bottom: 14px; }
+  h1 {
+    font-size: 1.7rem; line-height: 1.5; letter-spacing: 0.04em; font-weight: 700;
+    margin-bottom: 18px;
+  }
+  h1 span { display: block; }
+  .lead { font-size: 0.92rem; color: var(--ink-soft); }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .tag {
+    font-size: 0.72rem; color: var(--ink-soft); background: var(--accent-soft);
+    border-radius: 4px; padding: 4px 10px; letter-spacing: 0.06em;
+  }
+
+  /* sections */
+  section { padding: 40px 0; border-top: 1px solid var(--line); }
+  .sec-num { font-size: 0.64rem; letter-spacing: 0.24em; color: var(--accent); margin-bottom: 6px; }
+  h2 { font-size: 1.14rem; letter-spacing: 0.06em; margin-bottom: 18px; font-weight: 700; }
+  h3 { font-size: 0.95rem; letter-spacing: 0.04em; margin-bottom: 6px; }
+  p { font-size: 0.9rem; color: var(--ink-soft); }
+  p + p { margin-top: 12px; }
+
+  /* price */
+  .price-card {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 10px;
+    padding: 26px 22px; margin-bottom: 18px;
+  }
+  .price-label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.14em; margin-bottom: 4px; }
+  .price {
+    font-size: 2.2rem; font-weight: 700; letter-spacing: 0.02em; line-height: 1.2;
+    display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px;
+  }
+  .price small { font-size: 0.8rem; font-weight: 400; color: var(--muted); letter-spacing: 0.06em; }
+  .price-note { font-size: 0.76rem; color: var(--faint); margin-top: 8px; }
+  .cond { list-style: none; margin-top: 16px; border-top: 1px dashed var(--line); padding-top: 14px; }
+  .cond li {
+    font-size: 0.86rem; color: var(--ink-soft); padding-left: 1.2em; position: relative;
+  }
+  .cond li + li { margin-top: 6px; }
+  .cond li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+
+  /* features */
+  .features { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  .feature {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .feature h3 { color: var(--ink); }
+  .feature p { font-size: 0.85rem; }
+
+  /* steps */
+  .steps { list-style: none; counter-reset: step; }
+  .steps li {
+    position: relative; padding: 0 0 22px 46px; counter-increment: step;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute; left: 0; top: 1px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: #fff; border: 1px solid var(--accent); color: var(--accent);
+    font-size: 0.8rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .steps li::after {
+    content: ""; position: absolute; left: 15px; top: 34px; bottom: 4px;
+    width: 1px; background: var(--line);
+  }
+  .steps li:last-child { padding-bottom: 0; }
+  .steps li:last-child::after { display: none; }
+  .steps p { font-size: 0.84rem; }
+  .step-note { font-size: 0.76rem !important; color: var(--faint); margin-top: 2px; }
+
+  /* samples */
+  .samples { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .sample {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--paper); border: 1px solid var(--line); border-radius: 10px;
+    padding: 12px 14px; text-decoration: none; color: inherit; transition: 0.18s;
+  }
+  .sample:hover { border-color: var(--accent); }
+  .sample .thumb {
+    width: 54px; height: 54px; border-radius: 7px; flex: 0 0 54px;
+    background-size: cover; background-position: center; background-color: #eee;
+  }
+  .sample-body { min-width: 0; }
+  .sample-title { font-weight: 700; font-size: 0.92rem; }
+  .sample-sub { font-size: 0.76rem; color: var(--muted); line-height: 1.6; }
+  .all-link {
+    display: inline-block; margin-top: 16px; font-size: 0.84rem;
+    color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft);
+    padding-bottom: 1px;
+  }
+  .all-link:hover { border-bottom-color: var(--accent); }
+
+  /* contact */
+  .contact { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 26px 22px; }
+  .mail {
+    display: inline-block; margin-top: 10px; font-size: 1.02rem; font-weight: 700;
+    color: var(--accent); text-decoration: none; letter-spacing: 0.03em; word-break: break-all;
+  }
+  .contact p { font-size: 0.86rem; }
+  .contact dl { margin-top: 18px; border-top: 1px dashed var(--line); padding-top: 14px; font-size: 0.82rem; }
+  .contact dt { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.1em; margin-top: 8px; }
+  .contact dd { color: var(--ink-soft); }
+
+  /* footer */
+  footer {
+    padding: 30px 0 56px; border-top: 1px solid var(--line);
+    font-size: 0.74rem; color: var(--faint); line-height: 1.9;
+  }
+  footer p { font-size: 0.74rem; color: var(--faint); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer .foot-nav { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 10px; font-size: 0.78rem; }
+
+  @media (min-width: 640px) {
+    .wrap { padding: 0 32px; }
+    .header-inner { padding: 14px 32px; }
+    .hero { padding: 72px 0 56px; }
+    h1 { font-size: 2rem; }
+    .features { grid-template-columns: 1fr 1fr; }
+    .samples { grid-template-columns: 1fr 1fr; }
+    .price-card, .contact { padding: 30px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="../#about">
+      <span class="brand-main">今治ローカルWeb制作サポート（仮）</span>
+      <span class="brand-sub">IMABARI LOCAL WEB</span>
+    </a>
+    <a class="header-link" href="../">サンプル一覧へ</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <div class="eyebrow">ABOUT / PRICE &amp; FLOW</div>
+      <h1><span>今治のお店のための、</span><span>1ページのホームページ。</span></h1>
+      <p class="lead">
+        スマートフォンで見やすい1ページのホームページ（ランディングページ）を、
+        今治市内の店舗・事業者の方に向けて制作しています。
+        お店の強み、商品、営業時間、地図、電話番号を1枚にまとめ、
+        はじめてのお客様が迷わず来店・連絡できる形に整えます。
+      </p>
+      <div class="hero-tags">
+        <span class="tag">買い切り 30,000円</span>
+        <span class="tag">月額費用なし</span>
+        <span class="tag">修正2回まで</span>
+        <span class="tag">スマホ対応</span>
+      </div>
+    </div>
+
+    <section id="service">
+      <div class="sec-num">01 — SERVICE</div>
+      <h2>サービス概要</h2>
+      <p>
+        今治市内の店舗・事業者さま向けに、「1ページのホームページ」を制作します。
+        ホームページをお持ちでないお店でも、スマホで見られる案内ページを1枚お持ちいただくことで、
+        電話・地図・営業時間・メニューなどを一度に伝えられます。
+      </p>
+      <p>
+        すでにホームページをお持ちの場合も、今あるサイトはそのまま残したうえで、
+        「新しいお客様」「スマホで探しているお客様」向けの入口ページとして追加できます。
+      </p>
+    </section>
+
+    <section id="price">
+      <div class="sec-num">02 — PRICE</div>
+      <h2>料金と条件</h2>
+
+      <div class="price-card">
+        <div class="price-label">制作費（買い切り）</div>
+        <!-- TODO(差し替え): 「30,000円」の税込／税別表記は未確定。確定後にここへ追記する。 -->
+        <div class="price">30,000円 <small>買い切り</small></div>
+        <div class="price-note">月額の管理費・サーバー代はいただきません。</div>
+        <ul class="cond">
+          <li>お支払いは制作開始時にお願いしています。</li>
+          <li>内容の修正は2回まで対応します（文言・写真・営業時間の差し替えなど）。</li>
+          <li>3回目以降の大きな作り直しは、別途お見積りとなります。</li>
+          <li>写真のご提供がない場合は、公開されている情報をもとに構成します。</li>
+        </ul>
+      </div>
+
+      <p>
+        追加のページ制作、ドメイン取得、独自ドメインでの運用などをご希望の場合は、
+        内容に応じて別途お見積りします。まずはご相談ください。
+      </p>
+    </section>
+
+    <section id="features">
+      <div class="sec-num">03 — WHAT WE CAN DO</div>
+      <h2>できること</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>スマホ最適化の1ページLP</h3>
+          <p>公開中の情報やお店の写真をもとに、スマホで読みやすい1ページにまとめます。</p>
+        </div>
+        <div class="feature">
+          <h3>電話・地図・問い合わせ導線</h3>
+          <p>タップで電話発信、Googleマップへのリンク、問い合わせ先の整理まで整えます。</p>
+        </div>
+        <div class="feature">
+          <h3>既存サイトは残したまま追加</h3>
+          <p>今のホームページをそのままに、新規客・スマホ客向けの入口ページとして足せます。</p>
+        </div>
+        <div class="feature">
+          <h3>無料公開環境での運用</h3>
+          <p>無料で使える公開サービスを利用し、維持費のかからない形で公開できます。</p>
+        </div>
+        <div class="feature">
+          <h3>HTMLデータ一式のお渡し</h3>
+          <p>制作したページのデータ一式をお渡ししますので、後から別の環境へ移すこともできます。</p>
+        </div>
+        <div class="feature">
+          <h3>文章の整理から</h3>
+          <p>載せる内容が決まっていない場合も、お話をうかがいながら文章を整えます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow">
+      <div class="sec-num">04 — FLOW</div>
+      <h2>進め方</h2>
+      <ol class="steps">
+        <li>
+          <h3>サンプルを見る</h3>
+          <p>このサイトのサンプルで、仕上がりの雰囲気をご確認ください。</p>
+        </li>
+        <li>
+          <h3>メール等でご相談</h3>
+          <p>ご興味があれば、メールでお店のことを少しだけ教えてください。</p>
+          <p class="step-note">ご相談だけで終わっていただいても構いません。しつこい営業はしません。</p>
+        </li>
+        <li>
+          <h3>内容調整・本制作</h3>
+          <p>掲載する文章・写真・営業時間などを決め、ページを制作します。修正は2回まで。</p>
+        </li>
+        <li>
+          <h3>公開・納品</h3>
+          <p>公開してURLをお渡しし、HTMLデータ一式もお渡しします。</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="samples">
+      <div class="sec-num">05 — SAMPLES</div>
+      <h2>公開中のサンプル</h2>
+      <p style="margin-bottom:16px;">
+        実際に制作したサンプルです。店舗ごとに雰囲気を変えています。
+      </p>
+      <div class="samples">
+        <a class="sample" href="../masaoka/">
+          <div class="thumb" style="background-image:url('../masaoka/photo_jacquard.jpg')"></div>
+          <div class="sample-body">
+            <div class="sample-title">正岡商店（タオルショップ まさおか）</div>
+            <div class="sample-sub">タオル製造・プリント加工</div>
+          </div>
+        </a>
+        <a class="sample" href="../ozaki/">
+          <div class="thumb" style="background-image:url('../ozaki/ozaki_2.jpg')"></div>
+          <div class="sample-body">
+            <div class="sample-title">炭火やきとり おざき</div>
+            <div class="sample-sub">焼鳥・居酒屋</div>
+          </div>
+        </a>
+        <a class="sample" href="../takedaya/">
+          <div class="thumb" style="background-image:url('../takedaya/entrance.jpg')"></div>
+          <div class="sample-body">
+            <div class="sample-title">武田屋 八幡饅頭</div>
+            <div class="sample-sub">和菓子</div>
+          </div>
+        </a>
+        <a class="sample" href="../hairs-america/">
+          <div class="thumb" style="background-image:url('../hairs-america/exterior.jpg')"></div>
+          <div class="sample-body">
+            <div class="sample-title">Hair's AMERICA（ヘアーズアメリカ）</div>
+            <div class="sample-sub">理容室</div>
+          </div>
+        </a>
+        <a class="sample" href="../chuu/">
+          <div class="thumb" style="background-image:url('../chuu/photo_1.jpg')"></div>
+          <div class="sample-body">
+            <div class="sample-title">ホルモン焼肉 忠</div>
+            <div class="sample-sub">焼肉・ホルモン</div>
+          </div>
+        </a>
+      </div>
+      <a class="all-link" href="../">サンプルをすべて見る（一覧ページ）&rarr;</a>
+    </section>
+
+    <section id="contact">
+      <div class="sec-num">06 — CONTACT</div>
+      <h2>お問い合わせ</h2>
+      <div class="contact">
+        <p>「うちの店でも作れる？」「いくらかかる？」だけでも構いません。メールでお気軽にどうぞ。</p>
+        <a class="mail" href="mailto:wed_bb@yahoo.co.jp">wed_bb@yahoo.co.jp</a>
+        <dl>
+          <!-- TODO(差し替え): 屋号は仮。正式な屋号が決まったら header の brand-main と footer も合わせて変更する。 -->
+          <dt>屋号</dt>
+          <dd>今治ローカルWeb制作サポート（仮）</dd>
+          <!-- TODO(差し替え): 氏名（未確定）。 -->
+          <dt>担当</dt>
+          <dd>今治市内で活動しています。お名前はご相談の際にお伝えします。</dd>
+          <!-- TODO(差し替え): 電話番号（未確定）。公開してよい番号が決まったら追記する。 -->
+          <dt>対応エリア</dt>
+          <dd>今治市内および近郊</dd>
+          <dt>連絡方法</dt>
+          <dd>メール（24時間受け付け・返信は順次）</dd>
+        </dl>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-nav">
+      <a href="../">サンプル一覧</a>
+      <a href="#price">料金</a>
+      <a href="#flow">進め方</a>
+      <a href="#contact">お問い合わせ</a>
+    </div>
+    <p>
+      掲載しているサンプルは、各店舗さまへご提案するために公開情報をもとに制作したものです。<br />
+      料金・内容を保証するものではなく、店舗さまの許諾を得て公開しているものではありません。
+    </p>
+    <p style="margin-top:10px;">&copy; 2026 今治ローカルWeb制作サポート（仮）</p>
+  </div>
+</footer>
+
+</body>
+</html>

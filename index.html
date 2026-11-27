@@ -30,6 +30,16 @@
     .title { font-weight: 700; font-size: 1.02rem; margin-bottom: 3px; }
     .sub { font-size: 0.8rem; color: var(--muted); }
     .meta { font-size: 0.72rem; color: #9a9187; margin-top: 4px; letter-spacing: 0.04em; }
+    .about-link {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      background: #fff; border: 1px solid var(--line); border-left: 3px solid var(--accent);
+      border-radius: 8px; padding: 13px 16px; margin-bottom: 26px;
+      text-decoration: none; color: inherit; transition: 0.2s;
+    }
+    .about-link:hover { border-color: var(--accent); }
+    .about-link .al-title { font-size: 0.9rem; font-weight: 700; }
+    .about-link .al-sub { font-size: 0.74rem; color: var(--muted); margin-top: 2px; }
+    .about-link .al-arrow { color: var(--accent); font-size: 1rem; flex: 0 0 auto; }
     footer { margin-top: 34px; font-size: 0.72rem; color: #9a9187; line-height: 1.8; }
   </style>
 </head>
@@ -37,6 +47,14 @@
   <div class="eyebrow">IMABARI WEB DEMO</div>
   <h1>今治 ローカルビジネス デモサイト集</h1>
   <p class="lead">スマホ対応の1ページLP（買い切り3万円）の提案用サンプルです。写真・営業時間・価格は公開情報にもとづいています。</p>
+
+  <a class="about-link" href="./about/">
+    <span>
+      <span class="al-title">制作のご案内・料金</span>
+      <span class="al-sub" style="display:block">料金30,000円・できること・進め方・お問い合わせはこちら</span>
+    </span>
+    <span class="al-arrow">&rarr;</span>
+  </a>
 
   <a class="card" href="./chuu/">
     <div class="card-main">
@@ -94,7 +112,8 @@
   </a>
 
   <footer>
-    提案用のデモページです。掲載内容は2026年11月時点の公開情報にもとづいており、写真はGoogleマップの投稿写真を使用しています。
+    提案用のデモページです。掲載内容は2026年11月時点の公開情報にもとづいており、写真はGoogleマップの投稿写真を使用しています。<br />
+    <a href="./about/" style="color:#b36d2b;text-decoration:none">制作のご案内・料金（about/）&rarr;</a>
   </footer>
 </body>
 </html>
