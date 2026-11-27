@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ホルモン焼肉 忠（ちゅう）｜今治・泉川町</title>
+<meta name="description" content="愛媛県今治市のホルモン焼肉 忠。常盤町から泉川町へ移転オープンしました。">
+<style>
+  :root{
+    --bg:#141110;
+    --bg2:#1e1714;
+    --brown:#2b201b;
+    --line:#3d2e26;
+    --text:#f4ede5;
+    --muted:#cbbcae;
+    --fire:#e8552a;
+    --fire2:#f39a3d;
+    --radius:6px;
+    --max:960px;
+    --bar:56px;
+    --mincho:"Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;
+    --gothic:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic UI","Yu Gothic","Meiryo",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--gothic);
+    font-size:16px;
+    line-height:1.85;
+    letter-spacing:.03em;
+  }
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--mincho);font-weight:600;letter-spacing:.08em;line-height:1.4}
+
+
+  /* 固定バー */
+  .topbar{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    height:var(--bar);
+    background:rgba(20,17,16,.92);
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-in{
+    max-width:var(--max);margin:0 auto;height:100%;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 16px;gap:12px;
+  }
+  .topbar-name{font-family:var(--mincho);font-size:17px;letter-spacing:.1em;text-decoration:none;white-space:nowrap}
+  .topbar-name b{color:var(--fire2);font-weight:600}
+  .topbar-tel{
+    display:inline-flex;align-items:center;gap:6px;
+    background:linear-gradient(135deg,var(--fire),var(--fire2));
+    color:#1a0f0a;font-weight:700;font-size:14px;
+    text-decoration:none;padding:8px 14px;border-radius:999px;white-space:nowrap;
+  }
+
+
+  /* 共通 */
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  section{padding:80px 0;scroll-margin-top:var(--bar)}
+  .eyebrow{
+    display:block;font-size:12px;letter-spacing:.3em;color:var(--fire2);
+    margin-bottom:10px;font-family:var(--gothic);
+  }
+  .sec-title{font-size:26px;margin-bottom:28px}
+  .sec-title::after{
+    content:"";display:block;width:40px;height:2px;margin-top:14px;
+    background:linear-gradient(90deg,var(--fire),var(--fire2));
+  }
+  .fade{opacity:0;animation:fadeUp 1.4s ease-out forwards}
+  .d1{animation-delay:.3s}.d2{animation-delay:.6s}.d3{animation-delay:.9s}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1}html{scroll-behavior:auto}}
+
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    min-height:52px;padding:12px 24px;border-radius:999px;
+    font-weight:700;font-size:16px;text-decoration:none;text-align:center;
+  }
+  .btn-fire{background:linear-gradient(135deg,var(--fire),var(--fire2));color:#1a0f0a}
+  .btn-ghost{border:1px solid var(--fire2);color:var(--text);background:transparent}
+  .btn:focus-visible,.topbar-tel:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
+
+  /* 1. ヒーロー */
+  .hero{
+    position:relative;min-height:100vh;min-height:100svh;
+    display:flex;align-items:flex-end;
+    padding:calc(var(--bar) + 40px) 0 64px;overflow:hidden;
+  }
+  .hero img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    animation:heroIn 2.4s ease-out forwards;opacity:0;
+  }
+  @keyframes heroIn{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:scale(1)}}
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(20,17,16,.25) 0%,rgba(20,17,16,.35) 45%,rgba(20,17,16,.94) 100%);
+  }
+  .hero-in{position:relative;z-index:1;width:100%}
+  .hero-area{font-size:14px;letter-spacing:.3em;color:var(--muted)}
+  .hero h1{font-size:44px;margin:8px 0 18px;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+  .hero h1 small{display:block;font-size:.42em;letter-spacing:.2em;color:var(--fire2);margin-bottom:4px}
+  .rating{
+    display:inline-flex;align-items:center;gap:10px;
+    background:rgba(20,17,16,.7);border:1px solid var(--line);
+    padding:8px 16px;border-radius:999px;font-size:15px;
+  }
+  .rating .star{color:var(--fire2);font-size:18px;letter-spacing:0}
+  .rating strong{font-size:20px}
+
+
+  /* 2. 移転のお知らせ */
+  .notice{
+    background:linear-gradient(135deg,#7a2512 0%,var(--fire) 55%,var(--fire2) 100%);
+    color:#fff;padding:48px 0;
+  }
+  .notice-label{
+    display:inline-block;background:#141110;color:var(--fire2);
+    font-size:12px;font-weight:700;letter-spacing:.2em;
+    padding:4px 12px;border-radius:999px;margin-bottom:14px;
+  }
+  .notice h2{font-size:24px;margin-bottom:14px;text-shadow:0 1px 6px rgba(0,0,0,.3)}
+  .notice p{font-size:16px;margin-bottom:22px;text-shadow:0 1px 4px rgba(0,0,0,.35)}
+  .notice .btn{background:#141110;color:#fff}
+
+
+  /* 3. 店について */
+  .about{background:var(--bg)}
+  .about p{max-width:640px;font-size:17px;color:var(--text)}
+  .about p + p{margin-top:1em}
+
+
+  /* 4. ギャラリー */
+  .gallery{background:var(--bg2)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .grid figure{position:relative;overflow:hidden;border-radius:var(--radius);background:var(--brown)}
+  .grid img{width:100%;height:100%;object-fit:cover}
+  .grid .wide{grid-column:1 / -1;aspect-ratio:4/3}
+  .grid .tall{aspect-ratio:3/4}
+  .grid figcaption{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:24px 12px 10px;font-size:14px;font-family:var(--mincho);letter-spacing:.15em;
+    background:linear-gradient(180deg,transparent,rgba(0,0,0,.8));
+  }
+  @media (min-width:720px){
+    .grid{grid-template-columns:1.4fr 1fr 1fr;gap:16px}
+    .grid .wide{grid-column:auto;aspect-ratio:auto}
+    .grid .tall{aspect-ratio:3/4}
+  }
+
+
+  /* 5. 営業時間 */
+  .hours{background:var(--bg)}
+  .hours-table{width:100%;max-width:560px;border-collapse:collapse;font-size:16px}
+  .hours-table th,.hours-table td{padding:14px 12px;border-bottom:1px solid var(--line);text-align:left}
+  .hours-table th{width:5.5em;font-family:var(--mincho);font-weight:600;white-space:nowrap}
+  .hours-table td{font-variant-numeric:tabular-nums}
+  .hours-table tr.closed th,.hours-table tr.closed td{color:var(--fire2);font-weight:700}
+  .hours-table tr.closed{background:rgba(232,85,42,.1)}
+  .badge{
+    display:inline-block;background:var(--fire);color:#fff;font-size:12px;
+    padding:2px 10px;border-radius:999px;margin-left:6px;vertical-align:middle;font-weight:700;
+  }
+  .hours-note{margin-top:16px;font-size:14px;color:var(--muted)}
+
+
+  /* 6. アクセス */
+  .access{background:var(--bg2)}
+  .access-photo{border-radius:var(--radius);overflow:hidden;margin-bottom:28px}
+  .access-photo img{width:100%;aspect-ratio:16/9;object-fit:cover}
+  .info{display:grid;gap:0;margin-bottom:28px}
+  .info dt{font-size:13px;color:var(--fire2);letter-spacing:.2em;margin-top:18px}
+  .info dd{font-size:17px}
+  .info dd a{text-decoration:none;border-bottom:1px solid var(--fire2)}
+
+
+  /* 7. 予約 */
+  .reserve{
+    background:radial-gradient(ellipse at 50% 0%,rgba(232,85,42,.22),transparent 65%),var(--brown);
+    text-align:center;
+  }
+  .reserve .sec-title::after{margin-left:auto;margin-right:auto}
+  .reserve-lead{color:var(--muted);margin-bottom:12px}
+  .reserve-num{
+    display:block;font-family:var(--mincho);font-size:40px;letter-spacing:.06em;
+    text-decoration:none;margin-bottom:28px;font-variant-numeric:tabular-nums;
+  }
+  .btns{display:flex;flex-direction:column;gap:14px;max-width:420px;margin:0 auto}
+  .btns .btn{width:100%;min-height:60px;font-size:18px}
+  @media (min-width:720px){
+    .btns{flex-direction:row;max-width:640px}
+    .reserve-num{font-size:52px}
+  }
+
+
+  /* 8. フッター */
+  footer{background:#0d0b0a;padding:48px 0 40px;border-top:1px solid var(--line);text-align:center}
+  .foot-name{font-family:var(--mincho);font-size:20px;letter-spacing:.12em;margin-bottom:6px}
+  .foot-addr{font-size:14px;color:var(--muted);margin-bottom:20px}
+  .foot-x{
+    display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+    border:1px solid var(--line);padding:10px 20px;border-radius:999px;font-size:14px;margin-bottom:24px;
+  }
+  .foot-note{font-size:12px;color:#a89888;line-height:1.7}
+
+
+  @media (min-width:720px){
+    section{padding:110px 0}
+    .sec-title{font-size:32px}
+    .hero h1{font-size:68px}
+    .notice h2{font-size:30px}
+  }
+  @media (max-width:360px){
+    .topbar-name{font-size:15px}
+    .topbar-tel{padding:8px 11px;font-size:13px}
+    .hero h1{font-size:38px}
+    .reserve-num{font-size:34px}
+  }
+</style>
+</head>
+<body>
+
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="topbar-name" href="#top">ホルモン焼肉 <b>忠</b></a>
+    <a class="topbar-tel" href="tel:0898320429" aria-label="電話をかける 0898-32-0429">&#9742; 電話する</a>
+  </div>
+</header>
+
+
+<main id="top">
+
+
+  <!-- 1. ヒーロー -->
+  <section class="hero" aria-label="トップ">
+    <img src="./photo_1.jpg" alt="夜の店舗入口。提灯と「忠」の丸い看板が灯っている">
+    <div class="hero-in wrap">
+      <p class="hero-area fade d1">今治・泉川町</p>
+      <h1 class="fade d2"><small>ちゅう</small>ホルモン焼肉 忠</h1>
+      <p class="rating fade d3">
+        <span>Google</span>
+        <span class="star" aria-hidden="true">★</span>
+        <strong>4.8</strong>
+        <span>（432件）</span>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- 2. 移転のお知らせ -->
+  <section class="notice" aria-labelledby="notice-title">
+    <div class="wrap">
+      <span class="notice-label">移転のお知らせ</span>
+      <h2 id="notice-title">常盤町から泉川町へ<br>移転オープンしました</h2>
+      <p>新住所：〒794-0057<br>愛媛県今治市泉川町1-2-74</p>
+      <a class="btn" href="https://maps.google.com/?cid=10415001163302153620" target="_blank" rel="noopener">Googleマップで新店舗を見る</a>
+    </div>
+  </section>
+
+
+  <!-- 3. 店について -->
+  <section class="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <span class="eyebrow">ABOUT</span>
+      <h2 class="sec-title" id="about-title">店について</h2>
+      <p>ホルモンと焼肉を楽しめる、今治の人気店です。</p>
+      <p>Googleでは432件の口コミで★4.8の評価をいただいています。このたび常盤町から泉川町へ移転し、新しいお店で皆さまをお待ちしています。</p>
+    </div>
+  </section>
+
+
+  <!-- 4. ギャラリー -->
+  <section class="gallery" aria-labelledby="gallery-title">
+    <div class="wrap">
+      <span class="eyebrow">GALLERY</span>
+      <h2 class="sec-title" id="gallery-title">写真</h2>
+      <div class="grid">
+        <figure class="wide">
+          <img src="./photo_2.jpg" alt="皿に盛られた霜降りの焼肉用の肉" loading="lazy">
+          <figcaption>焼肉</figcaption>
+        </figure>
+        <figure class="tall">
+          <img src="./photo_3.jpg" alt="網の上で焼かれている肉" loading="lazy">
+          <figcaption>網焼き</figcaption>
+        </figure>
+        <figure class="tall">
+          <img src="./photo_4.jpg" alt="大皿に盛られた赤身肉の盛り合わせ" loading="lazy">
+          <figcaption>盛り合わせ</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 5. 営業時間 -->
+  <section class="hours" aria-labelledby="hours-title">
+    <div class="wrap">
+      <span class="eyebrow">HOURS</span>
+      <h2 class="sec-title" id="hours-title">営業時間</h2>
+      <table class="hours-table">
+        <caption style="text-align:left;color:var(--muted);font-size:14px;padding-bottom:8px;">曜日ごとの営業時間</caption>
+        <tbody>
+          <tr><th scope="row">月曜日</th><td>18:00〜22:00</td></tr>
+          <tr class="closed"><th scope="row">火曜日</th><td>定休日<span class="badge">休</span></td></tr>
+          <tr><th scope="row">水曜日</th><td>18:00〜22:00</td></tr>
+          <tr><th scope="row">木曜日</th><td>18:00〜22:00</td></tr>
+          <tr><th scope="row">金曜日</th><td>18:00〜22:00</td></tr>
+          <tr><th scope="row">土曜日</th><td>17:30〜22:30</td></tr>
+          <tr><th scope="row">日曜日</th><td>17:30〜22:00</td></tr>
+        </tbody>
+      </table>
+      <p class="hours-note">定休日：火曜日</p>
+    </div>
+  </section>
+
+
+  <!-- 6. アクセス -->
+  <section class="access" aria-labelledby="access-title">
+    <div class="wrap">
+      <span class="eyebrow">ACCESS</span>
+      <h2 class="sec-title" id="access-title">アクセス</h2>
+      <div class="access-photo">
+        <img src="./photo_5.jpg" alt="夜の店舗外観。赤いのれんとビールの旗" loading="lazy">
+      </div>
+      <dl class="info">
+        <dt>住所</dt>
+        <dd>〒794-0057<br>愛媛県今治市泉川町1-2-74</dd>
+        <dt>電話</dt>
+        <dd><a href="tel:0898320429">0898-32-0429</a></dd>
+      </dl>
+      <a class="btn btn-fire" href="https://maps.google.com/?cid=10415001163302153620" target="_blank" rel="noopener">Googleマップで開く</a>
+    </div>
+  </section>
+
+
+  <!-- 7. 予約・お問い合わせ -->
+  <section class="reserve" aria-labelledby="reserve-title">
+    <div class="wrap">
+      <span class="eyebrow">RESERVATION</span>
+      <h2 class="sec-title" id="reserve-title">ご予約・お問い合わせ</h2>
+      <p class="reserve-lead">お電話にて承ります</p>
+      <a class="reserve-num" href="tel:0898320429">0898-32-0429</a>
+      <div class="btns">
+        <a class="btn btn-fire" href="tel:0898320429">&#9742; 電話で予約する</a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?cid=10415001163302153620" target="_blank" rel="noopener">Googleマップ</a>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+
+<!-- 8. フッター -->
+<footer>
+  <div class="wrap">
+    <p class="foot-name">ホルモン焼肉 忠</p>
+    <p class="foot-addr">〒794-0057 愛媛県今治市泉川町1-2-74</p>
+    <a class="foot-x" href="https://x.com/horumoyakiniku" target="_blank" rel="noopener">公式X（@horumoyakiniku）</a>
+    <p class="foot-note">提案用デモページです。写真はGoogleマップの投稿写真を使用しています。</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
