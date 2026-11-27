@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>今治 ローカルビジネス デモサイト集</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <title>今治ローカルWeb制作｜お店のための1ページホームページ</title>
+  <meta name="description" content="今治市内の店舗・事業者向けに、スマホで見やすい1ページのホームページを買い切り30,000円で制作します。" />
   <style>
     :root { --ink: #221f1c; --muted: #6f675e; --line: #e5dfd5; --accent: #b36d2b; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -14,22 +16,9 @@
       -webkit-font-smoothing: antialiased;
     }
     .eyebrow { font-size: 0.7rem; letter-spacing: 0.28em; color: var(--accent); margin-bottom: 10px; }
-    h1 { font-size: 1.45rem; margin-bottom: 8px; letter-spacing: 0.04em; }
-    .lead { font-size: 0.86rem; color: var(--muted); margin-bottom: 32px; }
-    .card {
-      display: block; background: #fff; border: 1px solid var(--line);
-      border-radius: 10px; padding: 15px 18px; text-decoration: none; color: inherit;
-      margin-bottom: 12px; transition: 0.2s;
-    }
-    .card:hover { border-color: var(--accent); transform: translateY(-1px); }
-    .card-main { display: flex; align-items: center; gap: 14px; }
-    .thumb {
-      width: 62px; height: 62px; border-radius: 8px; flex: 0 0 62px;
-      background-size: cover; background-position: center; background-color: #eee;
-    }
-    .title { font-weight: 700; font-size: 1.02rem; margin-bottom: 3px; }
-    .sub { font-size: 0.8rem; color: var(--muted); }
-    .meta { font-size: 0.72rem; color: #9a9187; margin-top: 4px; letter-spacing: 0.04em; }
+    h1 { font-size: 1.45rem; margin-bottom: 8px; letter-spacing: 0.04em; line-height: 1.5; }
+    h2 { font-size: 0.92rem; margin-bottom: 8px; letter-spacing: 0.04em; }
+    .lead { font-size: 0.86rem; color: var(--muted); margin-bottom: 28px; }
     .about-link {
       display: flex; align-items: center; justify-content: space-between; gap: 12px;
       background: #fff; border: 1px solid var(--line); border-left: 3px solid var(--accent);
@@ -40,13 +29,18 @@
     .about-link .al-title { font-size: 0.9rem; font-weight: 700; }
     .about-link .al-sub { font-size: 0.74rem; color: var(--muted); margin-top: 2px; }
     .about-link .al-arrow { color: var(--accent); font-size: 1rem; flex: 0 0 auto; }
-    footer { margin-top: 34px; font-size: 0.72rem; color: #9a9187; line-height: 1.8; }
+    .note {
+      background: #fff; border: 1px solid var(--line); border-radius: 8px;
+      padding: 15px 18px; font-size: 0.8rem; color: var(--muted); line-height: 1.8;
+    }
+    .note a { color: var(--accent); text-decoration: none; word-break: break-all; }
+    footer { margin-top: 32px; font-size: 0.72rem; color: #9a9187; line-height: 1.9; }
   </style>
 </head>
 <body>
-  <div class="eyebrow">IMABARI WEB DEMO</div>
-  <h1>今治 ローカルビジネス デモサイト集</h1>
-  <p class="lead">スマホ対応の1ページLP（買い切り3万円）の提案用サンプルです。写真・営業時間・価格は公開情報にもとづいています。</p>
+  <div class="eyebrow">IMABARI LOCAL WEB</div>
+  <h1>今治のお店のための、1ページのホームページ。</h1>
+  <p class="lead">スマホ対応の1ページLP（買い切り30,000円）を制作しています。料金・できること・進め方は、下のご案内をご覧ください。</p>
 
   <a class="about-link" href="./about/">
     <span>
@@ -56,63 +50,19 @@
     <span class="al-arrow">&rarr;</span>
   </a>
 
-  <a class="card" href="./chuu/">
-    <div class="card-main">
-      <div class="thumb" style="background-image:url('./chuu/photo_1.jpg')"></div>
-      <div>
-        <div class="title">ホルモン焼肉 忠</div>
-        <div class="sub">焼肉・ホルモン ／ 今治市泉川町（常盤町から移転）</div>
-        <div class="meta">夜の雰囲気を活かしたデザイン・移転のお知らせ・電話予約導線</div>
-      </div>
-    </div>
-  </a>
-
-  <a class="card" href="./ozaki/">
-    <div class="card-main">
-      <div class="thumb" style="background-image:url('./ozaki/ozaki_2.jpg')"></div>
-      <div>
-        <div class="title">炭火やきとり おざき</div>
-        <div class="sub">焼鳥・居酒屋 ／ 今治市恵美須町</div>
-        <div class="meta">和の落ち着いたデザイン・お品書き・電話予約導線</div>
-      </div>
-    </div>
-  </a>
-
-  <a class="card" href="./takedaya/">
-    <div class="card-main">
-      <div class="thumb" style="background-image:url('./takedaya/entrance.jpg')"></div>
-      <div>
-        <div class="title">武田屋 八幡饅頭</div>
-        <div class="sub">和菓子 ／ 今治市玉川町八幡</div>
-        <div class="meta">老舗和菓子のデザイン・こだわり・価格表・ご贈答案内</div>
-      </div>
-    </div>
-  </a>
-
-  <a class="card" href="./hairs-america/">
-    <div class="card-main">
-      <div class="thumb" style="background-image:url('./hairs-america/exterior.jpg')"></div>
-      <div>
-        <div class="title">Hair's AMERICA（ヘアーズアメリカ）</div>
-        <div class="sub">理容室 ／ 今治市北日吉町</div>
-        <div class="meta">清潔感のあるモダンなデザイン・曜日別営業時間・アクセス</div>
-      </div>
-    </div>
-  </a>
-
-  <a class="card" href="./masaoka/">
-    <div class="card-main">
-      <div class="thumb" style="background-image:url('./masaoka/photo_jacquard.jpg')"></div>
-      <div>
-        <div class="title">正岡商店（タオルショップ まさおか）</div>
-        <div class="sub">タオル製造・プリント加工 ／ 今治市別宮町</div>
-        <div class="meta">B2B向け・プリント加工の一覧と定番サイズ表・電話／フォーム導線</div>
-      </div>
-    </div>
-  </a>
+  <section class="note">
+    <h2>制作サンプルについて</h2>
+    <p>
+      制作サンプルは、ご提案の際に個別にご案内しています（サンプル例は準備中です）。<br />
+      ご希望の業種・雰囲気をお知らせいただければ、近い構成のサンプルをお見せします。
+    </p>
+    <p style="margin-top:12px;">
+      掲載内容の取り下げ・修正のご要望は <a href="mailto:wed_bb@yahoo.co.jp">wed_bb@yahoo.co.jp</a> までご連絡ください。
+    </p>
+  </section>
 
   <footer>
-    提案用のデモページです。掲載内容は2026年11月時点の公開情報にもとづいており、写真はGoogleマップの投稿写真を使用しています。<br />
+    このサイトは、今治市内の店舗さまへのご提案用に制作したページです。<br />
     <a href="./about/" style="color:#b36d2b;text-decoration:none">制作のご案内・料金（about/）&rarr;</a>
   </footer>
 </body>
