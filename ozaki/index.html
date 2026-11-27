@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>炭火やきとり おざき｜愛媛県今治市恵美須町</title>
+  <style>
+    :root {
+      --bg: #14110f;
+      --surface: #1e1916;
+      --surface-light: #28211d;
+      --text: #f5efe6;
+      --muted: #b8aa99;
+      --accent: #d48c46;
+      --accent-dark: #b36d2b;
+      --border: rgba(212, 140, 70, 0.22);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    .sans {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(20, 17, 15, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      font-size: 1.05rem;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+    .header-cta {
+      background: var(--accent);
+      color: #14110f;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .hero {
+      position: relative;
+      min-height: 76vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 40px 20px;
+      background: linear-gradient(180deg, rgba(20,17,15,0.25) 0%, rgba(20,17,15,0.92) 85%),
+                  url('./ozaki_2.jpg') center/cover no-repeat;
+    }
+    .hero-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero-tag {
+      display: inline-block;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 3px 10px;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-size: clamp(1.9rem, 5vw, 3rem);
+      line-height: 1.3;
+      margin-bottom: 14px;
+      letter-spacing: 0.06em;
+    }
+    .hero p {
+      color: #e2d7c8;
+      font-size: 0.98rem;
+      margin-bottom: 24px;
+      max-width: 540px;
+    }
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #14110f;
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .btn-outline {
+      border: 1px solid var(--muted);
+      color: var(--text);
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+    section {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 56px 20px;
+    }
+    .sec-title {
+      font-size: 1.45rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+    .sec-sub {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 28px;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+    }
+    @media (min-width: 680px) {
+      .story-grid { grid-template-columns: 1.1fr 1fr; align-items: center; }
+    }
+    .story-grid img {
+      width: 100%;
+      border-radius: 6px;
+      display: block;
+      object-fit: cover;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .menu-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .menu-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      font-size: 0.92rem;
+    }
+    .menu-item span:last-child {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .info-box {
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .info-row {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.94rem;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-label { color: var(--muted); }
+    footer {
+      text-align: center;
+      padding: 28px 20px 80px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+    .mobile-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(20,17,15,0.96);
+      border-top: 1px solid var(--border);
+      padding: 10px 16px;
+      display: flex;
+      gap: 10px;
+      z-index: 30;
+    }
+    .mobile-bar a {
+      flex: 1;
+      text-align: center;
+      padding: 11px 0;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    @media (min-width: 680px) {
+      .mobile-bar { display: none; }
+      footer { padding-bottom: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">炭火やきとり おざき</div>
+    <a class="header-cta sans" href="tel:0898341225">電話予約</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-tag sans">愛媛県今治市・恵美須町</div>
+      <h1>関東仕込みの炭火焼き鳥を、<br>地元・今治で一本から。</h1>
+      <p class="sans">
+        愛媛県産の新鮮な鶏肉と、地元の老舗醤油を使った自家製タレ。
+        関東の居酒屋で20年以上腕を磨いた店主が、一串ずつ丁寧に焼き上げます。
+      </p>
+      <div class="btn-row sans">
+        <a class="btn-primary" href="tel:0898341225">📞 0898-34-1225 で予約する</a>
+        <a class="btn-outline" href="https://maps.google.com/?cid=12277621422547733779" target="_blank" rel="noopener">📍 Googleマップで開く</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">店主の想い</h2>
+    <p class="sec-sub sans">今治の夜に、ふらっと立ち寄れる一軒を</p>
+    <div class="story-grid">
+      <img src="./ozaki_1.jpg" alt="炭火やきとり おざき 店舗外観" />
+      <div class="sans" style="font-size: 0.94rem;">
+        <p style="margin-bottom: 12px;">
+          今治の老舗「おざき食堂」に生まれ、関東の居酒屋で20年以上経験を積んだのち、2024年12月に地元・恵美須町へUターン開業しました。
+        </p>
+        <p style="color: var(--muted);">
+          カウンター8席・テーブル8席の小さなお店です。1軒目に焼き鳥を楽しんで、そのまま今治の街へはしご酒——そんな夜の始まりにもぜひお立ち寄りください。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">お品書き（一部）</h2>
+    <p class="sec-sub sans">串焼きは1本からご注文いただけます（税込）</p>
+    <div class="menu-grid sans">
+      <div class="menu-card">
+        <h3>炭火やきとり</h3>
+        <div class="menu-item"><span>ねぎま</span><span>198円</span></div>
+        <div class="menu-item"><span>かわ</span><span>198円</span></div>
+        <div class="menu-item"><span>レバー</span><span>198円</span></div>
+        <div class="menu-item"><span>つくね</span><span>198円</span></div>
+        <div class="menu-item"><span>手羽先</span><span>275円</span></div>
+        <div class="menu-item"><span>うずら肉巻</span><span>275円</span></div>
+      </div>
+      <div class="menu-card">
+        <h3>一品料理</h3>
+        <div class="menu-item"><span>せんざんき</span><span>660円</span></div>
+        <div class="menu-item"><span>山芋ステーキ</span><span>715円</span></div>
+        <div class="menu-item"><span>自家製 厚揚げ</span><span>440円</span></div>
+      </div>
+      <div class="menu-card">
+        <h3>お飲み物</h3>
+        <div class="menu-item"><span>生ビール</span><span>660円</span></div>
+        <div class="menu-item"><span>生レモンサワー</span><span>550円</span></div>
+        <div class="menu-item"><span>濃酵梅酒</span><span>495円</span></div>
+        <div class="menu-item"><span>コーヒーサワー</span><span>495円</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">店舗情報・アクセス</h2>
+    <p class="sec-sub sans">ポートサイドビル1F・駐車場あり</p>
+    <div class="info-box sans">
+      <div class="info-row">
+        <div class="info-label">店名</div>
+        <div>炭火やきとり おざき</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">住所</div>
+        <div>〒794-0031 愛媛県今治市恵美須町1-4-11 ポートサイドビル101</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">電話番号</div>
+        <div><a href="tel:0898341225" style="color: var(--accent); text-decoration: none;">0898-34-1225</a></div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">営業時間</div>
+        <div>17:30〜22:00</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">定休日</div>
+        <div>月曜日（月曜が祝前日の場合は営業し翌日休）</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">席数</div>
+        <div>カウンター8席 / テーブル1卓8席（計16席）</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="sans">
+    © 炭火やきとり おざき（提案用デモページ）
+  </footer>
+
+  <div class="mobile-bar sans">
+    <a href="tel:0898341225" style="background: var(--accent); color: #14110f;">📞 電話予約</a>
+    <a href="https://maps.google.com/?cid=12277621422547733779" target="_blank" rel="noopener" style="background: var(--surface-light); color: var(--text); border: 1px solid var(--border);">📍 地図を見る</a>
+  </div>
+</body>
+</html>
