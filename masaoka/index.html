@@ -146,6 +146,22 @@ tr:last-child th,tr:last-child td{border-bottom:none}
   .co td{display:block;padding-top:4px}
   .contact-box{padding:24px 18px}
 }
+
+@media (max-width:600px){
+  .hero h1{font-size:22px;letter-spacing:0}
+  .tbl-wrap{border:0;background:transparent;overflow:visible}
+  .size{display:block;width:100%;font-size:13.5px}
+  .size thead{display:none}
+  .size tbody{display:block;background:#fff;border:1px solid var(--line);border-radius:6px;margin-bottom:12px;overflow:hidden}
+  .size tr{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;padding:12px 14px;border-bottom:1px solid var(--line)}
+  .size tr:last-child{border-bottom:0}
+  .size th{display:block;grid-column:1/-1;background:transparent;border:0;padding:0 0 4px;font-size:14.5px;white-space:normal}
+  .size td{display:block;border:0;padding:0;white-space:normal}
+  .size td:nth-of-type(1)::before{content:"目方";display:block;font-size:11px;color:var(--muted);line-height:1.6}
+  .size td:nth-of-type(2)::before{content:"パイル";display:block;font-size:11px;color:var(--muted);line-height:1.6}
+  .size td:nth-of-type(3)::before{content:"サイズ";display:block;font-size:11px;color:var(--muted);line-height:1.6}
+  .size td:nth-of-type(4)::before{content:"生産国";display:block;font-size:11px;color:var(--muted);line-height:1.6}
+}
 </style>
 </head>
 <body>
@@ -266,25 +282,35 @@ tr:last-child th,tr:last-child td{border-bottom:none}
       <div class="sec-head"><span class="en">SPECIFICATIONS</span><h2>定番サイズ（タオル生地）</h2><p>定番プリント生地のサイズです。</p></div>
       <div class="tbl-wrap">
         <table class="size">
-                      <thead><tr><th>品目</th><th>目方</th><th>パイル</th><th>サイズ</th><th>生産国</th></tr></thead>
-                      <tbody>
-                        <tr><th>シャーリングハンドタオル</th><td>140匁</td><td>30/2</td><td>約34×37cm</td><td>中国</td></tr>
-                        <tr><th rowspan="4">シャーリングフェイスタオル</th><td>260匁</td><td>20/1</td><td>約34×88cm</td><td>中国</td></tr>
-                        <tr><td>300匁</td><td>30/2</td><td>約34×88cm</td><td>中国</td></tr>
-                        <tr><td>320匁</td><td>30/2</td><td>約34×85cm</td><td>中国</td></tr>
-                        <tr><td>330匁（織り）</td><td>30/2</td><td>約34×88cm</td><td>日本</td></tr>
-                        <tr><th rowspan="4">シャーリングマフラー</th><td>260匁</td><td>20/1</td><td>約20×113cm</td><td>中国</td></tr>
-                        <tr><td>280匁</td><td>30/2</td><td>約20×113cm</td><td>中国</td></tr>
-                        <tr><td>300匁</td><td>30/2</td><td>約21×110cm</td><td>中国</td></tr>
-                        <tr><td>330匁（織り）</td><td>30/2</td><td>約20×115cm</td><td>日本</td></tr>
-                        <tr><th rowspan="3">シャーリングスポーツタオル</th><td>500匁</td><td>20/1</td><td>約40×115cm</td><td>中国</td></tr>
-                        <tr><td>550匁</td><td>30/2</td><td>約40×115cm</td><td>中国</td></tr>
-                        <tr><td>630匁（織り）</td><td>30/2</td><td>約40×115cm</td><td>日本</td></tr>
-                        <tr><th rowspan="2">シャーリングバスタオル</th><td>850匁</td><td>30/2</td><td>約60×120cm</td><td>中国</td></tr>
-                        <tr><td>1000匁（織り）</td><td>30/2</td><td>約60×125cm</td><td>日本</td></tr>
-                        <tr><th>大判シャーリングバスタオル</th><td>1200匁</td><td>20/1</td><td>約82×156cm</td><td>中国</td></tr>
-                      </tbody>
-                    </table>
+                  <thead><tr><th>品目</th><th>目方</th><th>パイル</th><th>サイズ</th><th>生産国</th></tr></thead>
+                  <tbody>
+                    <tr><th>シャーリングハンドタオル</th><td>140匁</td><td>30/2</td><td>約34×37cm</td><td>中国</td></tr>
+                  </tbody>
+                  <tbody>
+                    <tr><th rowspan="4">シャーリングフェイスタオル</th><td>260匁</td><td>20/1</td><td>約34×88cm</td><td>中国</td></tr>
+                    <tr><td>300匁</td><td>30/2</td><td>約34×88cm</td><td>中国</td></tr>
+                    <tr><td>320匁</td><td>30/2</td><td>約34×85cm</td><td>中国</td></tr>
+                    <tr><td>330匁（織り）</td><td>30/2</td><td>約34×88cm</td><td>日本</td></tr>
+                  </tbody>
+                  <tbody>
+                    <tr><th rowspan="4">シャーリングマフラー</th><td>260匁</td><td>20/1</td><td>約20×113cm</td><td>中国</td></tr>
+                    <tr><td>280匁</td><td>30/2</td><td>約20×113cm</td><td>中国</td></tr>
+                    <tr><td>300匁</td><td>30/2</td><td>約21×110cm</td><td>中国</td></tr>
+                    <tr><td>330匁（織り）</td><td>30/2</td><td>約20×115cm</td><td>日本</td></tr>
+                  </tbody>
+                  <tbody>
+                    <tr><th rowspan="3">シャーリングスポーツタオル</th><td>500匁</td><td>20/1</td><td>約40×115cm</td><td>中国</td></tr>
+                    <tr><td>550匁</td><td>30/2</td><td>約40×115cm</td><td>中国</td></tr>
+                    <tr><td>630匁（織り）</td><td>30/2</td><td>約40×115cm</td><td>日本</td></tr>
+                  </tbody>
+                  <tbody>
+                    <tr><th rowspan="2">シャーリングバスタオル</th><td>850匁</td><td>30/2</td><td>約60×120cm</td><td>中国</td></tr>
+                    <tr><td>1000匁（織り）</td><td>30/2</td><td>約60×125cm</td><td>日本</td></tr>
+                  </tbody>
+                  <tbody>
+                    <tr><th>大判シャーリングバスタオル</th><td>1200匁</td><td>20/1</td><td>約82×156cm</td><td>中国</td></tr>
+                  </tbody>
+                </table>
       </div>
       <p class="note">※スマートフォンでは表を横にスクロールしてご覧ください。</p>
       <div class="grid g2" style="margin-top:32px">
